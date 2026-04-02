@@ -1,13 +1,14 @@
 import { NavLink, useNavigate } from 'react-router-dom';
-import { HeaderItems } from '../../constants/HeaderItems';
 import { Text } from '../text';
 import { useHeader } from './useHeader';
 import { ChevronDown, ChevronUp, Menu } from 'lucide-react';
 import { LOCALE } from '../../data/home/locale';
 import { MobileMenu } from './MobileMenu';
+import { HeaderItems } from '../../constants/HeaderItems';
 
 export const Header = () => {
   const navigate = useNavigate();
+  0;
   const { selectedLocale, handleChangeLocale, isOpen, toggle, wrapperRef } =
     useHeader();
 
@@ -60,7 +61,7 @@ export const Header = () => {
             >
               {LOCALE.map((locale) => (
                 <div
-                  className='flex items-center gap-1 p-3 rounded-md border border-green-200 cursor-pointer hover:bg-green-100 transition-colors duration-200 z-[9999]'
+                  className='flex items-center gap-1 p-3 rounded-md border border-green-200 cursor-pointer hover:bg-green-100 transition-colors duration-200 z-9999'
                   key={locale.id}
                   onClick={() => handleChangeLocale(locale)}
                 >
