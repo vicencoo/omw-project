@@ -1,114 +1,19 @@
 import { Home, Phone } from 'lucide-react';
 import { locations } from '../../data/locations/locations';
 import { useLocations } from './useLocations';
-
-const serviceColors = {
-  Hotel: '#0a652c',
-  'Premium Fuel': '#4ade80',
-  Diesel: '#86efac',
-  'Car Wash': '#6ee7b7',
-  Shop: '#a3e635',
-  'Truck Lane': '#fbbf24',
-  'EV Charging': '#34d399',
-};
+import './locationStyles.css';
+import { useTranslation } from 'react-i18next';
+import { Text } from '../../components/Text';
 
 export const Locations = () => {
   const { activeId, setActiveId, mapRef } = useLocations(locations);
   const activeLoc = locations.find((l) => l.id === activeId);
+  const { t } = useTranslation('locations');
 
   return (
     <div className='w-full font-sans flex flex-col'>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
-
-        .leaflet-control-zoom a {
-          background: rgba(255,255,255,0.95) !important;
-          color: #16a34a !important;
-          border: 1px solid #d1fae5 !important;
-          box-shadow: 0 4px 14px rgba(0,0,0,0.08) !important;
-        }
-        .leaflet-control-zoom a:hover {
-          background: #16a34a !important;
-          color: white !important;
-        }
-        .leaflet-control-attribution { display: none !important; }
-
-        .omw-sidebar::-webkit-scrollbar { width: 4px; }
-        .omw-sidebar::-webkit-scrollbar-track { background: transparent; }
-        .omw-sidebar::-webkit-scrollbar-thumb { background: #86efac; border-radius: 999px; }
-
-        @keyframes slideIn {
-          from { opacity: 0; transform: translateX(-18px); }
-          to   { opacity: 1; transform: translateX(0); }
-        }
-        .slide-in { animation: slideIn 0.5s ease forwards; opacity: 0; }
-        .d1{animation-delay:.05s} .d2{animation-delay:.15s}
-        .d3{animation-delay:.25s} .d4{animation-delay:.35s}
-        .d5{animation-delay:.45s} .d6{animation-delay:.55s}
-
-        @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(12px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        .fade-up { animation: fadeUp 0.35s ease forwards; }
-
-        /* ── Layout container ──
-           Mobile  (<768px): column — map fixed height, sidebar scrolls below
-           Desktop (≥768px): row — sidebar fixed width, map fills height = viewport minus topbar.
-           Key: NO h-screen on the root; the desktop row uses a CSS height so it
-           sits flush against whatever follows (footer, etc.) without leaving a gap.
-        */
-        .omw-body {
-          display: flex;
-          flex-direction: column;
-        }
-        @media (min-width: 768px) {
-          .omw-body {
-            flex-direction: row;
-            /* 57px = topbar height; adjust if yours differs */
-            height: calc(100vh - 57px);
-            overflow: hidden;
-          }
-        }
-
-        .omw-map-wrap {
-          position: relative;
-          /* Mobile: fixed height so map doesn't collapse */
-          height: 56vw;
-          min-height: 240px;
-          max-height: 58vh;
-          flex-shrink: 0;
-        }
-        @media (min-width: 768px) {
-          .omw-map-wrap {
-            flex: 1 1 0%;
-            height: 100%;
-            max-height: none;
-          }
-        }
-
-        .omw-sidebar {
-          overflow-y: auto;
-          background: rgba(255,255,255,0.6);
-          backdrop-filter: blur(8px);
-          border-top: 1px solid rgba(22,163,74,0.08);
-          /* Mobile: sidebar sits BELOW the map naturally */
-        }
-        @media (min-width: 768px) {
-          .omw-sidebar {
-            width: 300px;
-            flex-shrink: 0;
-            height: 100%;
-            border-top: none;
-            border-right: 1px solid rgba(22,163,74,0.08);
-            /* Sidebar goes LEFT of map on desktop */
-            order: -1;
-          }
-        }
-        @media (min-width: 1024px) {
-          .omw-sidebar { width: 320px; }
-        }
-      `}</style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap'); `}</style>
 
       {/* ── Top Bar ── */}
       <div className='z-10 flex shrink-0 items-center justify-between border-b border-green-900/10 bg-white/70 px-4 sm:px-5 py-3 backdrop-blur-sm'>
@@ -118,17 +23,18 @@ export const Locations = () => {
           </div>
           <div>
             <h1 className='m-0 font-["DM_Serif_Display"] text-[18px] sm:text-[20px] leading-none text-gray-900'>
-              <em className='text-green-500'>Stacionet Tona</em>
+              <em className='text-green-500'>{t('header.title')}</em>
             </h1>
             <p className='mt-0.75 text-[10px] sm:text-[11px] text-green-700/70'>
-              Shqiperi &nbsp;·&nbsp; {locations.length} Pika
+              {t('header.country')} &nbsp;·&nbsp; {locations.length}{' '}
+              {t('header.points')}
             </p>
           </div>
         </div>
         <div className='flex items-center gap-1.5 rounded-full border border-green-200 bg-white px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-[11px] text-green-600 shadow-sm'>
           <span className='inline-block h-2 w-2 rounded-full bg-green-500 animate-pulse' />
-          <span className='hidden sm:inline'>Të gjithë stacionet aktive</span>
-          <span className='sm:hidden'>Aktive</span>
+          <span className='hidden sm:inline'>{t('header.desc')}</span>
+          <span className='sm:hidden'>{t('header.descShort')}</span>
         </div>
       </div>
 
@@ -141,7 +47,7 @@ export const Locations = () => {
               <button
                 key={loc.id}
                 onClick={() => setActiveId(activeId === loc.id ? null : loc.id)}
-                className={`slide-in d${i + 1} block w-full rounded-[14px] border p-3.5 text-left transition-all duration-200 md:hover:translate-x-0.75 active:scale-[0.99] ${
+                className={`slide-in d${i + 1} block w-full rounded-[14px] border p-3.5 text-left transition-all duration-200 md:hover:translate-x-0.75 active:scale-[0.99] cursor-pointer ${
                   activeId === loc.id
                     ? 'border-green-400 bg-green-50'
                     : 'border-green-100 bg-white hover:bg-green-50'
@@ -155,16 +61,12 @@ export const Locations = () => {
                       <span
                         className={`text-[11px] font-semibold ${activeId === loc.id ? 'text-white' : 'text-green-600'}`}
                       >
-                        0{loc.id}
+                        {loc.id < 10 ? `0${loc.id} ` : loc.id}
                       </span>
                     </div>
-                    <div>
-                      <div className='text-[13px] font-semibold leading-[1.2] text-gray-900'>
-                        {loc.name}
-                      </div>
-                      <div className='mt-0.5 text-[11px] text-green-700/70'>
-                        {loc.hours}
-                      </div>
+
+                    <div className='text-[13px] font-semibold leading-[1.2] text-gray-900'>
+                      {loc.name}
                     </div>
                   </div>
                   <svg
@@ -191,22 +93,6 @@ export const Locations = () => {
                   <span>{loc.address}</span>
                 </div>
 
-                <div className='flex flex-wrap gap-1'>
-                  {loc.services.map((svc) => (
-                    <span
-                      key={svc}
-                      className='rounded-md border px-2 py-0.5 text-[10px] font-medium'
-                      style={{
-                        background: `${serviceColors[svc]}15`,
-                        color: serviceColors[svc],
-                        borderColor: `${serviceColors[svc]}28`,
-                      }}
-                    >
-                      {svc}
-                    </span>
-                  ))}
-                </div>
-
                 {activeId === loc.id && (
                   <div className='fade-up mt-3 flex items-center justify-between border-t border-green-100 pt-3'>
                     <div className='flex items-center gap-1.5 text-xs text-green-600'>
@@ -218,9 +104,12 @@ export const Locations = () => {
               </button>
             ))}
           </div>
-          <div className='p-3 pb-4 text-center text-[11px] text-green-700/60'>
-            Select a station to zoom in
-          </div>
+
+          <Text
+            text={t('selectStation')}
+            size='text-xs'
+            className='text-green-700/60 py-4 text-center'
+          />
         </div>
 
         {/* Map */}
@@ -248,7 +137,7 @@ export const Locations = () => {
                 rel='noreferrer'
                 className='ml-1.5 rounded-[10px] bg-green-600 px-4 py-2 text-[12px] font-semibold text-white transition-colors hover:bg-green-700'
               >
-                {/* Get Directions */}Merr Udhëzime
+                {t('getDirections')}
               </a>
             </div>
           )}

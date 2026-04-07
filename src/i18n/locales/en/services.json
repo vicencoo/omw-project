@@ -1,1 +1,82 @@
-{}
+{
+  "hero": {
+    "subtitle": "Our Services",
+    "title1": "Energy",
+    "title2": "that moves",
+    "title3": "the market.",
+    "description": "From international import to every fuel station — we provide complete supply solutions with European standards and absolute reliability.",
+    "button1": "Become a Partner",
+    "button2": "View Services"
+  },
+  "steps": {
+    "one": {
+      "label": "Import",
+      "detail": "Sourcing from international markets"
+    },
+    "two": {
+      "label": "Storage",
+      "detail": "Stored in our facilities"
+    },
+    "three": {
+      "label": "Control",
+      "detail": "Testing and certification"
+    },
+    "four": {
+      "label": "Delivery",
+      "detail": "Transport to your business"
+    }
+  },
+  "offers": {
+    "title": "What We Offer",
+    "services": {
+      "one": {
+        "title": "Import & Procurement",
+        "subtitle": "International Supply",
+        "desc": "We import fuel from the most reliable international markets, ensuring continuous supply and competitive pricing. Our global partnerships guarantee uninterrupted access.",
+        "tags": ["Diesel", "Petrol", "Gas"]
+      },
+      "two": {
+        "title": "Wholesale Distribution",
+        "subtitle": "B2B Distribution",
+        "desc": "We supply over 50 fuel stations nationwide with large volumes and flexible contractual terms.",
+        "tags": ["Wholesale", "Contracts"]
+      },
+      "three": {
+        "title": "Storage & Warehousing",
+        "subtitle": "Modern Infrastructure",
+        "desc": "Our high-capacity storage facilities ensure safe handling and European-level technical standards.",
+        "tags": ["High Capacity", "Safety"]
+      },
+      "four": {
+        "title": "Logistics & Transport",
+        "subtitle": "Dedicated Fleet",
+        "desc": "Modern licensed tanker fleet for fuel transport, with real-time GPS tracking and certified drivers. On-time delivery, every time.",
+        "tags": ["GPS Tracking", "Tankers", "24/7"]
+      },
+      "five": {
+        "title": "Quality Control",
+        "subtitle": "Certification & Testing",
+        "desc": "Every fuel batch undergoes rigorous laboratory testing before distribution.",
+        "tags": ["ISO", "Laboratory"]
+      },
+      "six": {
+        "title": "Strategic Partnerships",
+        "subtitle": "Long-Term Cooperation",
+        "desc": "We offer long-term contracts with guaranteed pricing and exclusive preferential conditions for partner stations.",
+        "tags": ["Contracts", "SLA"]
+      }
+    }
+  },
+  "trusts": {
+    "text1": "Partner Stations",
+    "text2": "Liters Distributed",
+    "text3": "Years in Market",
+    "text4": "On-Time Delivery"
+  },
+  "collaborate": {
+    "subtitle": "Collaboration",
+    "title": "Ready to secure guaranteed fuel supply?",
+    "description": "Contact our team today and receive a personalized offer within 24 hours. Partnership starts with a conversation.",
+    "offerBtn": "Request an Offer Now"
+  }
+}

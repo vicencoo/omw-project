@@ -1,6 +1,9 @@
 import { Reveal } from '../../components/Reveal';
 
-export const ServiceCard = ({ s }) => {
+export const ServiceCard = ({ s, t }) => {
+  console.log(s);
+  const tags = t(`offers.${s.tags}`, { returnObjects: true });
+
   return (
     <Reveal>
       <div
@@ -16,19 +19,19 @@ export const ServiceCard = ({ s }) => {
 
         <div className='relative z-10'>
           <p className='text-green-500 text-xs uppercase tracking-widest mb-2'>
-            {s.subtitle}
+            {t(`offers.${s.subtitle}`)}
           </p>
           <h3 className='text-xl md:text-2xl font-serif text-green-950 group-hover:text-amber-600 transition-colors duration-300 leading-snug'>
-            {s.title}
+            {t(`offers.${s.title}`)}
           </h3>
         </div>
 
         <div className='relative z-10 mt-6'>
           <p className='text-green-700 text-sm leading-relaxed group-hover:text-green-800 transition-colors duration-300'>
-            {s.desc}
+            {t(`offers.${s.desc}`)}
           </p>
           <div className='mt-5 flex flex-wrap gap-2'>
-            {s.tags.map((tag) => (
+            {tags.map((tag) => (
               <span
                 key={tag}
                 className='text-xs px-3 py-1 rounded-full bg-green-50 group-hover:bg-amber-50 text-green-600 group-hover:text-amber-700 border border-green-200 group-hover:border-amber-300 transition-all duration-300'

@@ -16,12 +16,7 @@
       "crystal": {
         "cat": "diesel",
         "name": "crystal diesel",
-        "text": "Karburant diesel i rafinuar me pasterti kristalore dhe emision minimal.",
-        "spec": {
-          "label1": "ppm",
-          "label2": "Cetane",
-          "label3": "Pastërti"
-        }
+        "text": "Karburant diesel i rafinuar me pasterti kristalore dhe emision minimal."
       },
       "diesel": {
         "cat": "diesel",

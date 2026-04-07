@@ -1,0 +1,11 @@
+{
+  "header": {
+    "title": "Our Stations",
+    "country": "Albania",
+    "points": "Locations",
+    "desc": "All active stations",
+    "descShort": "Active"
+  },
+  "selectStation": "Select a station to zoom in",
+  "getDirections": "Get Directions"
+}

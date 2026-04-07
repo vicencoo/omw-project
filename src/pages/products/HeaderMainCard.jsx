@@ -21,23 +21,9 @@ export const HeaderMainCard = ({ mainCard, t }) => {
       <h3 className='font-black text-2xl uppercase tracking-tight text-slate-900 leading-none mb-2'>
         {t(mainCard.name)}
       </h3>
-      <p className='text-xs font-light text-slate-400 leading-relaxed mb-4 max-w-xs'>
+      <p className='text-sm font-sans font-normal text-slate-400 leading-relaxed mb-4 max-w-xs'>
         {t(mainCard.text)}
       </p>
-      <div className='flex gap-5'>
-        {mainCard.spec.map((s, i) => (
-          <div key={i} className='flex flex-col gap-0.5'>
-            <span
-              className={`text-base font-bold ${mainCard.color} leading-none`}
-            >
-              {s.val}
-            </span>
-            <span className='text-[8px] font-light tracking-widest uppercase text-slate-300'>
-              {t(`hero.products.${s.label}`)}
-            </span>
-          </div>
-        ))}
-      </div>
     </div>
   );
 };

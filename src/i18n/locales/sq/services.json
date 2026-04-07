@@ -5,26 +5,82 @@
     "title2": "që lëviz",
     "title3": "tregun.",
     "description": "Nga importi ndërkombëtar deri te çdo stacion karburanti — ofrojmë zgjidhje të plota furnizimi me standarde europiane dhe besueshmëri absolute.",
-    "'button1": "Bëhu Partner",
-    "'button2": "Shiko Shërbimet",
+    "button1": "Bëhu Partner",
+    "button2": "Shiko Shërbimet"
+  },
 
-    "steps": {
+  "steps": {
+    "one": {
+      "label": "Importi",
+      "detail": "Blerja nga tregjet ndërkombëtare"
+    },
+    "two": {
+      "label": "Magazinimi",
+      "detail": "Ruajtja në depot tona"
+    },
+    "three": {
+      "label": "Kontrolli",
+      "detail": "Testim dhe certifikim"
+    },
+    "four": {
+      "label": "Dorëzimi",
+      "detail": "Transport te partneri juaj"
+    }
+  },
+
+  "offers": {
+    "title": "Çfarë Ofrojmë",
+    "services": {
       "one": {
-        "label": "Importi",
-        "detail": "Blerja nga tregjet ndërkombëtare"
+        "title": "Import & Prokurimi",
+        "subtitle": "Furnizim Ndërkombëtar",
+        "desc": "Importojmë karburant nga tregjet ndërkombëtare më të besueshme, duke siguruar furnizim të vazhdueshëm dhe çmime konkurruese. Partneritetet tona globale garantojnë akses të pandërprerë.",
+        "tags": ["Nafte", "Benzinë", "Gaz"]
       },
       "two": {
-        "label": "Magazinimi",
-        "detail": "Ruajtja në depot tona"
+        "title": "Shpërndarje me Shumicë",
+        "subtitle": "Distribuim B2B",
+        "desc": "Furnizojmë mbi 50 stacione karburanti në të gjithë vendin me sasi të mëdha dhe kushte kontraktuale fleksibël.",
+        "tags": ["Shumicë", "Kontrata"]
       },
       "three": {
-        "label": "Kontrolli",
-        "detail": "Testim dhe certifikim"
+        "title": "Magazinim & Depo",
+        "subtitle": "Infrastrukturë Moderne",
+        "desc": "Depozitat tona të kapacitetit të lartë sigurojnë ruajtje të sigurt dhe standarde teknike të nivelit europian.",
+        "tags": ["Kapacitet i Lartë", "Siguri"]
       },
       "four": {
-        "label": "Dorëzimi",
-        "detail": "Transport te partneri juaj"
+        "title": "Logjistikë & Transport",
+        "subtitle": "Fleet i Dedikuar",
+        "desc": "Flotë moderne cisternash të licensuara për transport karburanti, me GPS real-time dhe ekip shoferësh të certifikuar. Dorëzim në kohë, çdo herë.",
+        "tags": ["Gjurmim GPS", "Cisterna", "24/7"]
+      },
+      "five": {
+        "title": "Kontroll Cilësie",
+        "subtitle": "Certifikim & Testim",
+        "desc": "Çdo seri karburanti kalon kontrolle rigoroze laboratorike para shpërndarjes.",
+        "tags": ["ISO", "Laborator"]
+      },
+      "six": {
+        "title": "Partneritete Strategjike",
+        "subtitle": "Bashkëpunim Afatgjatë",
+        "desc": "Ofrojmë kontrata afatgjata me çmime të garantuara dhe kushte preferenciale ekskluzive për stacionet partnere.",
+        "tags": ["Kontratat", "SLA"]
       }
     }
+  },
+
+  "trusts": {
+    "text1": "Stacione Partnere",
+    "text2": "Litra të Shpërndarë",
+    "text3": "Vjet në Treg",
+    "text4": "Dorëzim në Kohë"
+  },
+
+  "collaborate": {
+    "subtitle": "Bashkëpunim",
+    "title": "Gati të furnizoheni me karburant të garantuar?",
+    "description": "Kontaktoni ekipin tonë sot dhe merrni një ofertë personale brenda 24 orëve. Partneriteti fillon me një bisedë.",
+    "offerBtn": "Kërko Ofertë Tani"
   }
 }

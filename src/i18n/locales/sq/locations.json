@@ -1,0 +1,12 @@
+{
+  "header": {
+    "title": "Stacionet Tona",
+    "country": "Shqiperi",
+    "points": "Pika",
+    "desc": "Të gjithë stacionet aktive",
+    "descShort": "Aktive"
+  },
+  "selectStation": "Zgjidhni një stacion për të zmadhuar hartën",
+  "getDirections": "Merr Udhëzime",
+  "locations": {}
+}

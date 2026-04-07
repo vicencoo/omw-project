@@ -56,8 +56,8 @@ export const HeroSection = ({ t }) => {
 
               <Text
                 text={t(`hero.stats.${stat.label}`)}
-                size='text-[9px]'
-                font='font-light'
+                size='text-[11px]'
+                font='font-normal'
                 className='uppercase text-slate-500 tracking-wide'
               />
             </div>

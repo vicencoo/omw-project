@@ -5,9 +5,11 @@ import { ServiceCard } from './ServiceCard';
 import { Reveal } from '../../components/Reveal';
 import { services, steps, trusts } from '../../data/services';
 import { Text } from '../../components/Text';
+import { useTranslation } from 'react-i18next';
 
 export const Services = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation('services');
   return (
     <div className='flex flex-col min-h-screen'>
       <Reveal>
@@ -30,9 +32,13 @@ export const Services = () => {
           <div className='relative z-10 container mx-auto px-6 md:px-16'>
             <div className='flex items-center gap-4 mb-10'>
               <div className='h-px w-12 bg-amber-500' />
-              <span className='text-amber-600 tracking-[0.25em] text-xs font-medium uppercase'>
-                Shërbimet Tona
-              </span>
+
+              <Text
+                text={t('hero.subtitle')}
+                size='text-xs'
+                font='font-medium'
+                className='uppercase text-amber-600 tracking-[0.25em]'
+              />
               <div className='h-px flex-1 bg-green-200' />
               <span className='text-green-500 text-xs tracking-widest'>
                 EST. 2009
@@ -43,19 +49,17 @@ export const Services = () => {
               <Reveal>
                 <div>
                   <h1 className='text-6xl md:text-8xl font-serif leading-[0.95] text-green-950'>
-                    Energjia
+                    {t('hero.title1')}
                     <br />
-                    <span className='text-amber-500'>që lëviz</span>
+                    <span className='text-amber-500'> {t('hero.title2')}</span>
                     <br />
-                    tregun.
+                    {t('hero.title3')}
                   </h1>
                 </div>
               </Reveal>
               <div className='md:pb-2'>
                 <Text
-                  text={`Nga importi ndërkombëtar deri te çdo stacion karburanti —
-                ofrojmë zgjidhje të plota furnizimi me standarde europiane dhe
-                besueshmëri absolute.`}
+                  text={t('hero.description')}
                   size='text-lg'
                   font='font-medium'
                   className='text-green-900 leading-relaxed max-w-md'
@@ -63,7 +67,7 @@ export const Services = () => {
                 <Reveal>
                   <div className='mt-10 flex flex-wrap gap-4'>
                     <Button
-                      name={'Bëhu Partner'}
+                      name={t('hero.button1')}
                       endIcon={<MoveRight />}
                       bgColor='#FBBF24'
                       bgHover='#FCD34D'
@@ -77,9 +81,9 @@ export const Services = () => {
 
                     <a
                       href='#sherbimet'
-                      className='inline-flex items-center gap-3 border border-green-300 hover:border-amber-400 text-green-700 hover:text-amber-600 px-8 py-4 rounded-full transition-colors duration-200'
+                      className='inline-flex items-center gap-3 border border-green-300 hover:border-amber-400 text-green-700 hover:text-amber-600 px-8 py-4 rounded-full font-semibold transition-colors duration-200'
                     >
-                      Shiko Shërbimet
+                      {t('hero.button2')}
                     </a>
                   </div>
                 </Reveal>
@@ -93,7 +97,7 @@ export const Services = () => {
         <section className='border-y border-green-200 bg-white/60'>
           <div className='container mx-auto px-6 md:px-16'>
             <div className='grid  md:grid-cols-4'>
-              {steps.map((s, i) => (
+              {steps.map((step, i) => (
                 <div
                   key={i}
                   className='relative py-10 px-6 md:border-r border-r-0 border-green-200 last:border-r-0 md:border-b-0 border-b last:border-b-0 flex items-start gap-5'
@@ -104,13 +108,15 @@ export const Services = () => {
                     </span>
                   )}
                   <span className='text-3xl font-serif font-bold text-amber-500 leading-none mt-1'>
-                    {s.num}
+                    {step.num}
                   </span>
                   <div>
                     <p className='font-semibold text-green-950 text-base'>
-                      {s.label}
+                      {t(`steps.${step.label}`)}
                     </p>
-                    <p className='text-green-600 text-sm mt-0.5'>{s.detail}</p>
+                    <p className='text-green-600 text-sm mt-0.5'>
+                      {t(`steps.${step.detail}`)}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -157,13 +163,13 @@ export const Services = () => {
             <div className='flex items-center gap-4 mb-16'>
               <div className='h-px w-12 bg-amber-500' />
               <span className='text-amber-600 tracking-[0.25em] text-xs font-medium uppercase'>
-                Çfarë Ofrojmë
+                {t('offers.title')}
               </span>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6'>
               {services.map((s, i) => (
-                <ServiceCard key={i} s={s} />
+                <ServiceCard key={i} s={s} t={t} />
               ))}
             </div>
           </div>
@@ -173,17 +179,17 @@ export const Services = () => {
       <section className='bg-amber-400 py-0'>
         <div className='container mx-auto px-6 md:px-16'>
           <div className='grid  md:grid-cols-4'>
-            {trusts.map((t, i) => (
+            {trusts.map((trust, i) => (
               <Reveal key={i}>
                 <div className='md:py-12 py-6 px-6 md:border-r border-r-0 border-amber-500 last:border-r-0 border-b md:border-b-0 flex flex-col gap-1'>
                   <Text
-                    text={t.value}
+                    text={trust.value}
                     size='text-4xl md:text-5xl'
                     font='font-serif font-bold'
                     className='text-stone-950 '
                   />
                   <Text
-                    text={t.label}
+                    text={t(`trusts.${trust.label}`)}
                     size='text-xs'
                     font='font-semibold'
                     className='uppercase tracking-widest text-stone-700'
@@ -210,7 +216,7 @@ export const Services = () => {
           <div className='flex flex-col gap-3'>
             <Reveal>
               <Text
-                text={`Bashkëpunim`}
+                text={t(`collaborate.subtitle`)}
                 size='text-xs'
                 font='font-medium'
                 className='text-amber-600 tracking-[0.25em] uppercase block'
@@ -219,7 +225,7 @@ export const Services = () => {
 
             <Reveal>
               <Text
-                text={`Gati të furnizoheni me karburant të garantuar?`}
+                text={t('collaborate.title')}
                 size='text-4xl md:text-6xl'
                 font='font-serif'
                 className='text-green-950 leading-tight max-w-3xl mx-auto'
@@ -227,8 +233,7 @@ export const Services = () => {
             </Reveal>
             <Reveal>
               <Text
-                text={` Kontaktoni ekipin tonë sot dhe merrni një ofertë personale brenda 24
-            orëve. Partneriteti fillon me një bisedë.`}
+                text={t('collaborate.description')}
                 size='text-lg'
                 className='text-green-700 max-w-xl mx-auto leading-relaxed'
               />
@@ -237,7 +242,7 @@ export const Services = () => {
           <Reveal>
             <div className='mt-12 flex flex-col sm:flex-row items-center justify-center gap-4'>
               <Button
-                name={`Kërko Ofertë Tani`}
+                name={t('collaborate.offerBtn')}
                 endIcon={<MoveRight />}
                 rounded='35px'
                 bgHover='#FCD34D'

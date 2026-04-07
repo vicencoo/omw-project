@@ -16,12 +16,7 @@
       "crystal": {
         "cat": "diesel",
         "name": "crystal diesel",
-        "text": "Refined diesel fuel with crystal-clear purity and minimal emissions.",
-        "spec": {
-          "label1": "ppm",
-          "label2": "Cetane",
-          "label3": "Purity"
-        }
+        "text": "Refined diesel fuel with crystal-clear purity and minimal emissions."
       },
       "diesel": {
         "cat": "diesel",

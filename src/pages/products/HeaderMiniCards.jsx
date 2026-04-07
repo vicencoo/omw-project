@@ -10,26 +10,16 @@ export const HeaderMiniCards = ({ item, t }) => {
       />
       <Text
         text={t(item.cat)}
-        size='text-[8px]'
+        size='text-[10px]'
         font='font-semibold'
         className='tracking-[0.15em] uppercase text-slate-500'
       />
       <Text
         text={t(item.name)}
-        size='text-xs'
+        size='text-sm'
         font='font-black'
         className='uppercase text-slate-900 leading-tight'
       />
-
-      {item.spec.map((spec, i) => (
-        <Text
-          key={i}
-          text={spec.val}
-          size='text-sm'
-          font='font-bold'
-          className={`leading-none ${item.color}`}
-        />
-      ))}
     </div>
   );
 };
