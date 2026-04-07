@@ -1,22 +1,22 @@
 import { Clock, Fuel, ShieldCheck } from 'lucide-react';
 
-export const HERO_FEATURES = [
+export const getHeroFeatures = (t) => [
   {
     id: 1,
     icon: Fuel,
-    label: 'Karburant Cilësor',
-    text: 'Karburant me kualitet të lartë për sigurinë tuaj',
+    label: t('firstLabel'),
+    text: t('firstText'),
   },
   {
     id: 2,
     icon: Clock,
-    label: '24/7 pa ndërprerje',
-    text: 'Shërbim nonstop në të gjitha pikat',
+    label: t('secondLabel'),
+    text: t('secondText'),
   },
   {
     id: 3,
     icon: ShieldCheck,
-    label: 'Besim & Korrektësi',
-    text: 'Shërbim i sinqertë dhe i besueshëm për çdo klient',
+    label: t('thirdLabel'),
+    text: t('thirdText'),
   },
 ];

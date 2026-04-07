@@ -1,0 +1,52 @@
+{
+  "heroSubtitle": "Rreth Nesh",
+  "heroTitle": {
+    "title1": "Energji.",
+    "title2": "Besueshmëri.",
+    "title3": "Kualitet."
+  },
+  "heroText": "Partneri juaj i besueshëm për karburant cilësor dhe shërbim të shpejtë — çdo ditë, çdo udhëtim.",
+  "heroDiscover": "Zbuloni historinë tonë",
+
+  "stats": {
+    "experience": "Vjet Eksperiencë",
+    "clients": "Klientë të Kënaqur",
+    "service": "Shërbim i Vazhdueshëm",
+    "fuel": "Karburant i Certifikuar"
+  },
+
+  "story": {
+    "subtitle": "Historia Jonë",
+    "title": "Nga një vizion i thjeshtë deri te lider i tregut",
+    "mission": "\"Besojmë se çdo shofer meriton karburant cilësor dhe shërbim me respekt.\"",
+    "text1": "Kompania jonë ka filluar me një qëllim të thjeshtë: t'u ofrojmë klientëve tanë produktin më cilësor me shërbimin më të mirë. Sot, me mbi 15 vjet eksperiencë, jemi krenarë të jemi ndër operatorët më të besueshëm të karburantit në rajon.",
+    "text2": "Çdo ditë punojmë për të ruajtur standardet tona të larta dhe për të siguruar që çdo klient të largohet i kënaqur.",
+    "established": "Themeluar"
+  },
+  "values": {
+    "subtitle": "Vlerat Tona",
+    "title": "Pse të na zgjidhni ne?",
+    "description": "Katër shtylla mbi të cilat ndërtuam reputacionin tonë.",
+    "quality": {
+      "title": "Cilësi",
+      "description": "Karburant i certifikuar dhe i testuar sipas standardeve ndërkombëtare, për motor të shëndetshëm."
+    },
+    "speed": {
+      "title": "Shpejtësi",
+      "description": "Shërbim i menjëhershëm pa radhë të gjata — koha juaj ka vlerë për ne."
+    },
+    "safety": {
+      "title": "Siguri",
+      "description": "Infrastrukturë moderne dhe protokolle strikte sigurie për çdo furnizim."
+    },
+    "trust": {
+      "title": "Besim",
+      "description": "Transparencë e plotë në çmime dhe shërbim — pa surpriza, vetëm besueshmëri."
+    }
+  },
+  "collaborate": {
+    "title": "Gati të bashkëpunojmë?",
+    "description": "Na kontaktoni sot për çdo pyetje ose informacion.",
+    "button": "na kontaktoni"
+  }
+}

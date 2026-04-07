@@ -1,19 +1,17 @@
 import { MoveRight, Phone } from 'lucide-react';
-import { Button } from '../../components/button/Button';
+import { Button } from '../../components/Button';
 import { useNavigate } from 'react-router-dom';
-import { Text } from '../../components/text';
 import { ServiceCard } from './ServiceCard';
-import { Reveal } from '../../components/reveal/Reveal';
+import { Reveal } from '../../components/Reveal';
 import { services, steps, trusts } from '../../data/services';
+import { Text } from '../../components/Text';
 
 export const Services = () => {
   const navigate = useNavigate();
   return (
     <div className='flex flex-col min-h-screen'>
-      {/* ── HERO ──────────────────────────────────────────── */}
       <Reveal>
         <section className='relative overflow-hidden min-h-[90vh] flex flex-col  pb-20 pt-24'>
-          {/* Grid texture overlay */}
           <div
             className='absolute inset-0 opacity-10'
             style={{
@@ -23,17 +21,13 @@ export const Services = () => {
             }}
           />
 
-          {/* Big decorative background word */}
           <span className='absolute md:top-1/2 top-1/3 left-1/2 -translate-x-1/2 md:-translate-y-1/2 -translate-y-1/3 text-[22vw] font-serif font-bold text-green-100 select-none whitespace-nowrap pointer-events-none leading-none'>
             FUEL
           </span>
 
-          {/* Left amber bar */}
           <div className='absolute left-0 top-0 w-1 h-full bg-amber-400' />
 
-          {/* Content */}
           <div className='relative z-10 container mx-auto px-6 md:px-16'>
-            {/* Eyebrow row */}
             <div className='flex items-center gap-4 mb-10'>
               <div className='h-px w-12 bg-amber-500' />
               <span className='text-amber-600 tracking-[0.25em] text-xs font-medium uppercase'>
@@ -95,7 +89,6 @@ export const Services = () => {
         </section>
       </Reveal>
 
-      {/* ── PROCESS STRIP ─────────────────────────────────── */}
       <Reveal>
         <section className='border-y border-green-200 bg-white/60'>
           <div className='container mx-auto px-6 md:px-16'>
@@ -105,7 +98,6 @@ export const Services = () => {
                   key={i}
                   className='relative py-10 px-6 md:border-r border-r-0 border-green-200 last:border-r-0 md:border-b-0 border-b last:border-b-0 flex items-start gap-5'
                 >
-                  {/* Arrow connector (hide on last) */}
                   {i < steps.length - 1 && (
                     <span className='hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 text-amber-500 text-lg'>
                       ›
@@ -128,10 +120,9 @@ export const Services = () => {
       </Reveal>
 
       {/* ── SERVICES GRID ─────────────────────────────────── */}
-      <Reveal>
+      {/* <Reveal>
         <section id='sherbimet' className='py-28'>
-          <div className='container mx-auto px-6 md:px-16'>
-            {/* Section label */}
+          <div className='container w-full mx-auto px-6 md:px-16'>
             <div className='flex items-center gap-4 mb-16'>
               <div className='h-px w-12 bg-amber-500' />
               <span className='text-amber-600 tracking-[0.25em] text-xs font-medium uppercase'>
@@ -139,24 +130,18 @@ export const Services = () => {
               </span>
             </div>
 
-            {/* Asymmetric grid — row 1: large | small+small stacked */}
             <div className='grid md:grid-cols-3 gap-5 mb-5'>
-              {/* Card 01 — spans 2 cols */}
               <ServiceCard s={services[0]} span='md:col-span-2' />
 
-              {/* Cards 02 & 03 stacked */}
               <div className='flex flex-col gap-5'>
                 <ServiceCard s={services[1]} />
                 <ServiceCard s={services[2]} />
               </div>
             </div>
 
-            {/* Row 2: small+small stacked | large */}
             <div className='grid md:grid-cols-3 gap-5'>
-              {/* Card 04 — spans 2 cols */}
               <ServiceCard s={services[3]} span='md:col-span-2' />
 
-              {/* Cards 05 & 06 stacked */}
               <div className='flex flex-col gap-5'>
                 <ServiceCard s={services[4]} />
                 <ServiceCard s={services[5]} />
@@ -164,18 +149,33 @@ export const Services = () => {
             </div>
           </div>
         </section>
+      </Reveal> */}
+
+      <Reveal>
+        <section id='sherbimet' className='py-28'>
+          <div className='container'>
+            <div className='flex items-center gap-4 mb-16'>
+              <div className='h-px w-12 bg-amber-500' />
+              <span className='text-amber-600 tracking-[0.25em] text-xs font-medium uppercase'>
+                Çfarë Ofrojmë
+              </span>
+            </div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6'>
+              {services.map((s, i) => (
+                <ServiceCard key={i} s={s} />
+              ))}
+            </div>
+          </div>
+        </section>
       </Reveal>
 
-      {/* ── TRUST BAND ────────────────────────────────────── */}
       <section className='bg-amber-400 py-0'>
         <div className='container mx-auto px-6 md:px-16'>
           <div className='grid  md:grid-cols-4'>
             {trusts.map((t, i) => (
-              <Reveal>
-                <div
-                  key={i}
-                  className='md:py-12 py-6 px-6 md:border-r border-r-0 border-amber-500 last:border-r-0 border-b md:border-b-0 flex flex-col gap-1'
-                >
+              <Reveal key={i}>
+                <div className='md:py-12 py-6 px-6 md:border-r border-r-0 border-amber-500 last:border-r-0 border-b md:border-b-0 flex flex-col gap-1'>
                   <Text
                     text={t.value}
                     size='text-4xl md:text-5xl'
@@ -195,7 +195,6 @@ export const Services = () => {
         </div>
       </section>
 
-      {/* ── PARTNERSHIP CTA ───────────────────────────────── */}
       <section className='relative py-32 overflow-hidden'>
         {/* Grid texture */}
         <div

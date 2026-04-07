@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { Reveal } from '../../components/reveal/Reveal';
+import { Reveal } from '../../components/Reveal';
 
 const PINS = [
   { left: '22%', top: '38%', delay: '0.3s' },
@@ -11,7 +11,7 @@ const PINS = [
   { left: '41%', top: '55%', delay: '2.1s' },
 ];
 
-export const LocationsBanner = () => {
+export const LocationsBanner = ({ t }) => {
   const navigate = useNavigate();
 
   return (
@@ -354,22 +354,22 @@ export const LocationsBanner = () => {
         </div>
 
         <div className='loc-badge'>
-          <div className='loc-badge-num'>12</div>
-          <div className='loc-badge-lbl'>Stacione në Shqipëri</div>
+          <div className='loc-badge-num'>5</div>
+          <div className='loc-badge-lbl'>{t('locationsStationsText')}</div>
         </div>
 
         <div className='loc-content'>
           <Reveal>
             <div className='loc-eyebrow'>
               <span className='loc-eyebrow-line' />
-              <span className='loc-eyebrow-text'>Ku ndodhemi</span>
+              <span className='loc-eyebrow-text'>{t('locationsLabel')}</span>
               <span className='loc-eyebrow-line' />
             </div>
           </Reveal>
 
           <Reveal>
             <h2 className='loc-heading'>
-              Pika në të gjithë <em>Shqipërinë</em>
+              {t('locationsText')} <em>{t('locationsCountry')}</em>
             </h2>
           </Reveal>
 
@@ -381,7 +381,7 @@ export const LocationsBanner = () => {
                 navigate('/locations');
               }}
             >
-              Shiko të gjitha pikat tona
+              {t('locationsButton')}
               <span className='loc-btn-arrow'>→</span>
             </button>
           </Reveal>

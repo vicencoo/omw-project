@@ -1,16 +1,19 @@
-import { Button } from '../../components/button/Button';
-import { Text } from '../../components/text';
-import { Reveal } from '../../components/reveal/Reveal';
+import { Button } from '../../components/Button';
+import { Text } from '../../components/Text';
+import { Reveal } from '../../components/Reveal';
 import { LocationsBanner } from './LocationsBanner';
-import { HERO_FEATURES } from '../../data/home/heroFeatures';
 import { homeStats } from '../../data/home/statistics';
 import { FuelSlider } from './FuelSlider';
 import { MoveRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { ServicesSection } from './ServicesSection';
+import { useTranslation } from 'react-i18next';
+import { getHeroFeatures } from '../../data/home/heroFeatures';
 
 export const Home = () => {
+  const { t } = useTranslation('home');
   const navigate = useNavigate();
+  const HERO_FEATURES = getHeroFeatures(t);
   return (
     <div className='flex flex-col gap-20 py-20'>
       <Reveal>
@@ -20,36 +23,28 @@ export const Home = () => {
               <div className='flex items-center gap-2'>
                 <span className='flex w-9 h-[0.5px] bg-green-600' />
                 <Text
-                  text={'Stacioni juaj i karburantit në Shqipëri'}
+                  text={t('heroSubtitle')}
                   size='text-xs'
                   font='font-medium font-serif'
                   className='uppercase text-green-600 tracking-[0.2em] '
                 />
               </div>
               <Text
-                text={'Gjithmonë Në Rrugën Tuaj'}
+                text={t('heroTitle')}
                 size='md:text-7xl text-5xl'
                 font='font-semibold font-serif'
                 className='text-green-900 leading-snug italic'
               />
-              <Text
-                text={`OMW — On My Way ju ofron karburant të cilësisë së lartë, shërbime auto dhe gjithçka tjetër që ju nevojitet për udhëtimin tuaj, me shërbim të shpejtë dhe miqësor 24 orë në ditë.`}
-                className='md:max-w-120'
-              />
+              <Text text={t('heroDescription')} className='md:max-w-120' />
               <div className='flex md:flex-row flex-col gap-4'>
                 <Button
-                  name={'gjej pikën më të afërt'}
+                  name={t('findNearest')}
                   bgColor='#16a34a'
                   bgHover='#1e8449'
                   color='white'
                   border='transparent'
                   borderHover='#1e8449'
                   onClick={() => navigate('/locations')}
-                />
-                <Button
-                  name={'shiko çmimet e sotme'}
-                  bgHover='#16a34a'
-                  borderHover='#16a34a'
                 />
               </div>
             </div>
@@ -108,7 +103,7 @@ export const Home = () => {
                   className='text-green-300'
                 />
                 <Text
-                  text={stat.text}
+                  text={t(stat.text)}
                   size='text-xs'
                   font='font-medium'
                   className='uppercase tracking-widest text-white/55'
@@ -125,14 +120,14 @@ export const Home = () => {
             <div className='flex items-center gap-2'>
               <span className='flex w-9 h-[0.5px] bg-green-600' />
               <Text
-                text={'Produktet Tona'}
+                text={t('productSubtitle')}
                 size='text-xs'
                 font='font-medium font-serif'
                 className='uppercase text-green-600 tracking-[0.2em]'
               />
             </div>
             <Text
-              text={'Gamë e gjerë produktesh'}
+              text={t('productTitle')}
               size='md:text-4xl text-2xl'
               font='font-medium font-serif'
               className='text-green-950 leading-snug italic'
@@ -143,7 +138,7 @@ export const Home = () => {
 
           <div className='flex w-full justify-center'>
             <Button
-              name={'shiko produktet'}
+              name={t('productTitle')}
               endIcon={<MoveRight />}
               borderHover={'#016630 '}
               bgHover='#dcfce7 '
@@ -156,7 +151,7 @@ export const Home = () => {
 
       <Reveal>
         <section className='container'>
-          <LocationsBanner />
+          <LocationsBanner t={t} />
         </section>
       </Reveal>
 

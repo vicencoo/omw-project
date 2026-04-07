@@ -1,8 +1,8 @@
 export const HeaderItems = [
-  { id: 1, label: 'kreu', path: '/' },
-  { id: 2, label: 'rreth nesh', path: '/about' },
-  { id: 3, label: 'produktet', path: '/products' },
-  { id: 4, label: 'pikat tona', path: '/locations' },
-  { id: 5, label: 'shërbimet', path: '/services' },
-  { id: 6, label: 'kontakt', path: '/contact' },
+  { id: 1, label: 'nav.home', path: '/' },
+  { id: 2, label: 'nav.about', path: '/about' },
+  { id: 3, label: 'nav.products', path: '/products' },
+  { id: 4, label: 'nav.locations', path: '/locations' },
+  { id: 5, label: 'nav.services', path: '/services' },
+  { id: 6, label: 'nav.contact', path: '/contact' },
 ];

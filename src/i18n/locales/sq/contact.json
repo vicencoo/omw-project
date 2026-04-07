@@ -1,0 +1,15 @@
+{
+  "subTitle": "Na Kontaktoni",
+  "title": "Jemi këtu për ju, çdo orë të ditës",
+  "name": "emri",
+  "surname": "mbiemri",
+  "email": "email",
+  "subject": "subjekti",
+  "message": "mesazhi",
+  "namePlaceholder": "Shkruani emrin tuaj ...",
+  "surnamePlaceholder": "Shkruani mbiemrin tuaj ...",
+  "emailPlaceholder": "Shkruani email-in tuaj ...",
+  "subjectPlaceholder": "Partneritet / Karriere / Media",
+  "messagePlaceholder": "Na tregoni se si mund t'ju ndihmojmë ...",
+  "button": "Dërgo Mesazhin"
+}

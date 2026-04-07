@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "subtitle": "Shërbimet Tona",
+    "title1": "Energjia",
+    "title2": "që lëviz",
+    "title3": "tregun.",
+    "description": "Nga importi ndërkombëtar deri te çdo stacion karburanti — ofrojmë zgjidhje të plota furnizimi me standarde europiane dhe besueshmëri absolute.",
+    "'button1": "Bëhu Partner",
+    "'button2": "Shiko Shërbimet",
+
+    "steps": {
+      "one": {
+        "label": "Importi",
+        "detail": "Blerja nga tregjet ndërkombëtare"
+      },
+      "two": {
+        "label": "Magazinimi",
+        "detail": "Ruajtja në depot tona"
+      },
+      "three": {
+        "label": "Kontrolli",
+        "detail": "Testim dhe certifikim"
+      },
+      "four": {
+        "label": "Dorëzimi",
+        "detail": "Transport te partneri juaj"
+      }
+    }
+  }
+}

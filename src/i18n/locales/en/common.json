@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "locations": "Our Locations",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "footer": {
+    "description": "We take care of your vehicle with high-quality fuel and fast service. Present across Albania.",
+    "label1": "Company",
+    "label2": "Contact",
+    "item1": "About Us",
+    "item2": "Our Locations",
+    "item3": "Products",
+    "item4": "Services",
+    "item5": "Contact Us"
+  },
+  "contact": {
+    "contactLabel1": "Head Office",
+    "contactLabel2": "Phone",
+    "contactLabel3": "Email",
+    "contactLabel4": "Office Hours",
+    "contactText1": "Deshmorët e 4 Shkurtit Street, Sky Tower Floor 7/3, Tirana",
+    "contactText2": "+355 4 222 1666/177",
+    "contactText3": "legal@atoil.al",
+    "contactText4": "Open 24/7",
+    "footerRights": "© OMW. All rights reserved."
+  }
+}

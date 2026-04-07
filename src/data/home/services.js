@@ -10,43 +10,38 @@ import {
 export const SERVICES = [
   {
     id: 1,
-    title: 'Karburant Cilësor',
-    description:
-      'Naftë dhe benzinë me standard të lartë për performancë të sigurt dhe të qëndrueshme.',
+    title: 'serviceTitle1',
+    description: 'serviceText1',
     icon: Fuel,
   },
   {
     id: 2,
-    title: 'Hotel',
-    description: 'Akomodohuni dhe shijoni hotelin tonë i cili gjendet ne Vorë',
+    title: 'serviceTitle2',
+    description: 'serviceText2',
     icon: Hotel,
   },
   {
     id: 3,
-    title: 'Shërbime Auto',
-    description:
-      'Kontrolle bazë, vajra, goma dhe ndihmë e shpejtë për nevojat e përditshme të makinës.',
+    title: 'serviceTitle3',
+    description: 'serviceText3',
     icon: Wrench,
   },
   {
     id: 4,
-    title: 'Mini Market',
-    description:
-      'Produkte të përditshme, ujë, pije dhe artikuj të nevojshëm gjatë udhëtimit tuaj.',
+    title: 'serviceTitle4',
+    description: 'serviceText4',
     icon: ShoppingBag,
   },
   {
     id: 5,
-    title: 'Kafe & Snacks',
-    description:
-      'Pushim i shkurtër me kafe, pije freskuese dhe snack-e për çdo udhëtar.',
+    title: 'serviceTitle5',
+    description: 'serviceText5',
     icon: Coffee,
   },
   {
     id: 6,
-    title: 'Shërbim i Besueshëm',
-    description:
-      'Staf miqësor, ambient i rregullt dhe shërbim i disponueshëm për t’ju ndihmuar në çdo kohë.',
+    title: 'serviceTitle6',
+    description: 'serviceText6',
     icon: ShieldCheck,
   },
 ];

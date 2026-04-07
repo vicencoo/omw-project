@@ -1,0 +1,52 @@
+{
+  "heroSubtitle": "About Us",
+  "heroTitle": {
+    "title1": "Energy.",
+    "title2": "Reliability.",
+    "title3": "Quality."
+  },
+  "heroText": "Your trusted partner for quality fuel and fast service — every day, every journey.",
+  "heroDiscover": "Discover our story",
+
+  "stats": {
+    "experience": "Years of Experience",
+    "clients": "Satisfied Clients",
+    "service": "Continuous Service",
+    "fuel": "Certified Fuel"
+  },
+
+  "story": {
+    "subtitle": "Our Story",
+    "title": "From a simple vision to a market leader",
+    "mission": "\"We believe every driver deserves quality fuel and respectful service.\"",
+    "text1": "Our company started with a simple goal: to offer our customers the highest quality product with the best service. Today, with over 15 years of experience, we are proud to be one of the most trusted fuel operators in the region.",
+    "text2": "Every day we work to maintain our high standards and ensure that every customer leaves satisfied.",
+    "established": "Established"
+  },
+  "values": {
+    "subtitle": "Our Values",
+    "title": "Why choose us?",
+    "description": "Four pillars on which we built our reputation.",
+    "quality": {
+      "title": "Quality",
+      "description": "Certified and tested fuel according to international standards, for a healthy engine."
+    },
+    "speed": {
+      "title": "Speed",
+      "description": "Immediate service without long queues — your time is valuable to us."
+    },
+    "safety": {
+      "title": "Safety",
+      "description": "Modern infrastructure and strict safety protocols for every supply."
+    },
+    "trust": {
+      "title": "Trust",
+      "description": "Full transparency in pricing and service — no surprises, only reliability."
+    }
+  },
+  "collaborate": {
+    "title": "Ready to collaborate?",
+    "description": "Contact us today for any questions or information.",
+    "button": "contact us"
+  }
+}

@@ -1,5 +1,5 @@
 import { useRef, useState, useCallback } from 'react';
-import { Reveal } from '../../components/reveal/Reveal';
+import { Reveal } from '../../components/Reveal';
 import { FUELS } from '../../data/fuels/fuels';
 
 export const FuelSlider = () => {

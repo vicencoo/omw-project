@@ -1,29 +1,29 @@
 export const stats = [
-  { value: '15+', label: 'Vjet Eksperiencë' },
-  { value: '50K+', label: 'Klientë të Kënaqur' },
-  { value: '24/7', label: 'Shërbim i Vazhdueshëm' },
-  { value: '99%', label: 'Karburant i Certifikuar' },
+  { value: '15+', label: 'stats.experience' },
+  { value: '50K+', label: 'stats.clients' },
+  { value: '24/7', label: 'stats.service' },
+  { value: '99%', label: 'stats.fuel' },
 ];
 
 export const values = [
   {
     icon: '✦',
-    title: 'Cilësi',
-    desc: 'Karburant i certifikuar dhe i testuar sipas standardeve ndërkombëtare, për motor të shëndetshëm.',
+    title: 'values.quality.title',
+    desc: 'values.quality.description',
   },
   {
     icon: '⚡',
-    title: 'Shpejtësi',
-    desc: 'Shërbim i menjëhershëm pa radhë të gjata — koha juaj ka vlerë për ne.',
+    title: 'values.speed.title',
+    desc: 'values.speed.description',
   },
   {
     icon: '🛡',
-    title: 'Siguri',
-    desc: 'Infrastrukturë moderne dhe protokolle strikte sigurie për çdo furnizim.',
+    title: 'values.safety.title',
+    desc: 'values.safety.description',
   },
   {
     icon: '🤝',
-    title: 'Besim',
-    desc: 'Transparencë e plotë në çmime dhe shërbim — pa surpriza, vetëm besueshmëri.',
+    title: 'values.trust.title',
+    desc: 'values.trust.description',
   },
 ];

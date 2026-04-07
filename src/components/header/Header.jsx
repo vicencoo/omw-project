@@ -1,26 +1,23 @@
-import { NavLink, useNavigate } from 'react-router-dom';
-import { Text } from '../text';
+import { NavLink } from 'react-router-dom';
+import { Text } from '../Text';
 import { useHeader } from './useHeader';
 import { ChevronDown, ChevronUp, Menu } from 'lucide-react';
 import { LOCALE } from '../../data/home/locale';
-import { MobileMenu } from './MobileMenu';
-import { HeaderItems } from '../../constants/HeaderItems';
+import { MobileMenu } from '../MobileMenu';
+import { HeaderItems } from '../../constants/headerItems';
+import { OmwLogo } from '../OmwLogo';
+import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
-  const navigate = useNavigate();
-  0;
   const { selectedLocale, handleChangeLocale, isOpen, toggle, wrapperRef } =
     useHeader();
+  const { t } = useTranslation('common');
 
   return (
-    <div className='sticky top-0 z-50 flex w-full bg-white border-b border-green-100 shadow-sm shadow-green-100/50'>
+    <div className='sticky top-0 z-2000 flex w-full bg-white border-b border-green-100 shadow-sm shadow-green-100/50'>
       <div className='container flex w-full items-center justify-between py-3'>
-        <Text
-          text={'OMW'}
-          font='font-semibold font-serif'
-          className='tracking-wider px-4 py-1 border rounded-xl border-green-700 text-green-700 bg-green-50 cursor-pointer select-none hover:scale-105 transition-all duration-200 will-change-transform'
-          onClick={() => navigate('/')}
-        />
+        {/*  */}
+        <OmwLogo />
         <div className='hidden md:flex gap-10 '>
           {HeaderItems.map((item) => (
             <NavLink
@@ -37,7 +34,7 @@ export const Header = () => {
               }`
               }
             >
-              {item.label}
+              {t(item.label)}
             </NavLink>
           ))}
         </div>
@@ -57,7 +54,7 @@ export const Header = () => {
             </div>
 
             <div
-              className={`absolute top-10 right-0 bg-white flex w-42.5 flex-col py-3 rounded-lg px-4 gap-3 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5 pointer-events-none'} transition-all duration-300 will-change-transform`}
+              className={`absolute top-12 right-0 border border-green-100 bg-white flex w-42.5 flex-col py-3 rounded-lg px-4 gap-3 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5 pointer-events-none'} transition-all duration-300 will-change-transform`}
             >
               {LOCALE.map((locale) => (
                 <div

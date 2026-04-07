@@ -1,11 +1,10 @@
-import { Reveal } from '../../components/reveal/Reveal';
+import { Reveal } from '../../components/Reveal';
 
-export const ServiceCard = ({ s, span = '' }) => {
+export const ServiceCard = ({ s }) => {
   return (
     <Reveal>
       <div
-        className={`group relative bg-white border border-green-200 hover:border-amber-400/70 rounded-2xl p-8 md:p-10 flex flex-col justify-between overflow-hidden transition-all duration-300 ${span}`}
-        style={{ minHeight: span ? '300px' : '220px' }}
+        className={`group relative bg-white border border-green-200 hover:border-amber-400/70 rounded-2xl p-8 md:p-10 flex flex-col justify-between overflow-hidden transition-all duration-300`}
       >
         {/* Large ID watermark */}
         <span className='absolute top-4 right-6 text-7xl font-serif font-bold text-green-100 group-hover:text-green-100 select-none leading-none transition-colors duration-300'>

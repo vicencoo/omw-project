@@ -4,25 +4,25 @@ export const Contact_Info = [
   {
     id: 1,
     icon: MapPin,
-    label: 'zyra qendrore',
-    text: 'Rruga Deshmorët e 4 Shkurtit, Sky Tower Kati 7/3, Tiranë',
+    label: 'contact.contactLabel1',
+    text: 'contact.contactText1',
   },
   {
     id: 2,
     icon: Phone,
-    label: 'telefon',
-    text: '+355 4 222 1666/177',
+    label: 'contact.contactLabel2',
+    text: 'contact.contactText2',
   },
   {
     id: 3,
     icon: Mail,
-    label: 'email',
-    text: 'legal@atoil.al',
+    label: 'contact.contactLabel3',
+    text: 'contact.contactText3',
   },
   {
     id: 4,
     icon: Clock,
-    label: 'orari i zyrës',
-    text: `E Hënë–E Premte, 08:00–17:00`,
+    label: 'contact.contactLabel4',
+    text: 'contact.contactText4',
   },
 ];

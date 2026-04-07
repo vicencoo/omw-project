@@ -1,29 +1,25 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { FooterItems } from '../../constants/footer';
-import { Text } from '../text';
-import { Icon } from '../icon/Icon';
-import { Contact_Info } from '../../data/contact/contactInfo';
+import { Link } from 'react-router-dom';
+import { OmwLogo } from './OmwLogo';
+import { Text } from './Text';
+import { FooterItems } from '../constants/footer';
+import { Contact_Info } from '../data/contact/contactInfo';
+import { Icon } from '../components/Icon';
+import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
-  const navigate = useNavigate();
-
+  const { t } = useTranslation('common');
   return (
     <footer className='w-full border-t border-green-200 bg-white'>
       <div className='container pt-12 md:pt-16'>
         <div className='grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-12'>
           {/* Brand */}
           <div className='flex flex-col gap-5 max-w-sm'>
-            <button
-              onClick={() => navigate('/')}
-              className='group flex w-fit items-center gap-3 rounded-2xl border border-green-200 bg-green-50 px-4 py-2 transition-all duration-300 hover:-translate-y-0.5 hover:border-green-400 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2'
-            >
-              <span className='font-serif text-lg font-semibold tracking-[0.2em] text-green-700'>
-                OMW
-              </span>
-            </button>
+            <div className='flex'>
+              <OmwLogo />
+            </div>
 
             <Text
-              text='Kujdesemi për automjetin tuaj me karburant cilësor dhe shërbim të shpejtë. Prezentë kudo në Shqipëri.'
+              text={t('footer.description')}
               className='leading-6 text-gray-600 tracking-wide'
               size='text-sm'
               font='font-medium'
@@ -33,7 +29,7 @@ export const Footer = () => {
           {/* Company */}
           <div className='flex flex-col gap-5'>
             <Text
-              text={'Kompania'}
+              text={t('footer.label1')}
               size='text-xl'
               font='font-semibold font-serif'
               className='text-gray-900'
@@ -46,7 +42,7 @@ export const Footer = () => {
                     to={item.path || '#'}
                     className='w-fit text-sm font-medium text-gray-600 transition-colors duration-200 hover:text-green-600  rounded-md tracking-wider'
                   >
-                    {item.name}
+                    {t(item.name)}
                   </Link>
                 </li>
               ))}
@@ -56,7 +52,7 @@ export const Footer = () => {
           {/* Contact */}
           <div className='flex flex-col gap-5'>
             <Text
-              text={'Kontakt'}
+              text={t('footer.label2')}
               size='text-xl'
               font='font-semibold font-serif'
               className='text-gray-900'
@@ -71,7 +67,7 @@ export const Footer = () => {
                     className={'text-green-600'}
                   />
                   <Text
-                    text={info.text}
+                    text={t(info.text)}
                     className='leading-6 text-gray-600'
                     font='font-medium'
                     size='text-sm'
@@ -88,7 +84,7 @@ export const Footer = () => {
             size='text-sm'
             font='font-medium'
             className='tracking-wide text-gray-500'
-            text='© OMW. Të gjitha të drejtat e rezervuara.'
+            text={t('footer.footerRights')}
           />
 
           <div className='flex items-center gap-4 text-sm text-gray-500'>

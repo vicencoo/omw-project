@@ -1,0 +1,15 @@
+{
+  "subTitle": "Contact Us",
+  "title": "We are here for you, at any hour of the day",
+  "name": "First Name",
+  "surname": "Last Name",
+  "email": "Email",
+  "subject": "Subject",
+  "message": "Message",
+  "namePlaceholder": "Enter your first name...",
+  "surnamePlaceholder": "Enter your last name...",
+  "emailPlaceholder": "Enter your email...",
+  "subjectPlaceholder": "Partnership / Careers / Media",
+  "messagePlaceholder": "Tell us how we can help you...",
+  "button": "Send Message"
+}

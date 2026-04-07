@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Kreu",
+    "about": "Rreth Nesh",
+    "products": "Produktet",
+    "locations": "Pikat Tona",
+    "services": "Shërbimet",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "description": "Kujdesemi për automjetin tuaj me karburant cilësor dhe shërbim të shpejtë. Prezentë kudo në Shqipëri.",
+    "label1": "Kompania",
+    "label2": "Kontakt",
+    "item1": "Rreth Nesh",
+    "item2": "Pikat Tona",
+    "item3": "Produktet",
+    "item4": "Shërbimet",
+    "item5": "Na Kontaktoni"
+  },
+  "contact": {
+    "contactLabel1": "zyra qendrore",
+    "contactLabel2": "telefon",
+    "contactLabel3": "email",
+    "contactLabel4": "orari i zyrës",
+    "contactText1": "Rruga Deshmorët e 4 Shkurtit, Sky Tower Kati 7/3, Tiranë",
+    "contactText2": "+355 4 222 1666/177",
+    "contactText3": "legal@atoil.al",
+    "contactText4": "24/7 Hapur",
+    "footerRights": "© OMW. Të gjitha të drejtat e rezervuara."
+  }
+}

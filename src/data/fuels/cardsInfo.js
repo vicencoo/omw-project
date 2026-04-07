@@ -1,13 +1,13 @@
 export const Cards_Info = [
   {
     id: 1,
-    cat: 'diesel',
-    name: 'crystal diesel',
-    text: 'Karburant diesel i rafinuar me pasterti kristalore dhe emision minimal.',
+    cat: 'hero.products.crystal.cat',
+    name: 'hero.products.crystal.name',
+    text: 'hero.products.crystal.text',
     spec: [
-      { val: '≤10', label: 'ppm' },
-      { val: '≥51', label: 'Cetane' },
-      { val: 'A++', label: 'Pastërti' },
+      { val: '≤10', label: 'crystal.spec.label1' },
+      { val: '51+', label: 'crystal.spec.label2' },
+      { val: 'A++', label: 'crystal.spec.label3' },
     ],
     hoverBg: 'hover:bg-amber-50/60',
     hoverBorder: 'hover:border-amber-500',
@@ -16,8 +16,8 @@ export const Cards_Info = [
   },
   {
     id: 2,
-    cat: 'diesel',
-    name: 'euro diesel',
+    cat: 'hero.products.diesel.cat',
+    name: 'hero.products.diesel.name',
     spec: [{ val: '-50%' }],
     hoverBg: 'hover:bg-sky-50/60',
     hoverBorder: 'hover:border-sky-500',
@@ -26,8 +26,8 @@ export const Cards_Info = [
   },
   {
     id: 3,
-    cat: 'benzinë',
-    name: 'benzinë',
+    cat: 'hero.products.unloaded.cat',
+    name: 'hero.products.unloaded.name',
     spec: [{ val: '5 RON' }],
     hoverBg: 'hover:bg-green-50/60',
     hoverBorder: 'hover:border-green-500',
@@ -36,12 +36,18 @@ export const Cards_Info = [
   },
   {
     id: 4,
-    cat: 'gaz',
-    name: 'LPG',
+    cat: 'hero.products.lpg.cat',
+    name: 'hero.products.lpg.name',
     spec: [{ val: '−50%' }],
     hoverBg: 'hover:bg-red-50/60',
     hoverBorder: 'hover:border-red-500',
     lineBg: 'bg-red-500',
     color: 'text-red-500',
   },
+];
+
+export const heroStats = [
+  { num: '4', label: 'label1' },
+  { num: 'Euro 6', label: 'label2' },
+  { num: '24/7', label: 'label3' },
 ];

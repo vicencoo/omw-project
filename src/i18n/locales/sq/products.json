@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "subtitle": "Gama Jonë e Produkteve",
+    "title1": "Zgjidhje",
+    "title2": "Karburanti",
+    "description": "Nga benzina me performancë të lartë deri te GNL me djegie të pastër — të rafinuara me precizion për çdo motor, çdo industri.",
+
+    "stats": {
+      "label1": "Produkte",
+      "label2": "Në Përputhje",
+      "label3": "Shpërndarje"
+    },
+
+    "products": {
+      "title": "Produktet Tona",
+      "crystal": {
+        "cat": "diesel",
+        "name": "crystal diesel",
+        "text": "Karburant diesel i rafinuar me pasterti kristalore dhe emision minimal.",
+        "spec": {
+          "label1": "ppm",
+          "label2": "Cetane",
+          "label3": "Pastërti"
+        }
+      },
+      "diesel": {
+        "cat": "diesel",
+        "name": "euro diesel"
+      },
+      "unloaded": {
+        "cat": "benzinë",
+        "name": "benzinë"
+      },
+      "lpg": {
+        "cat": "gaz",
+        "name": "LPG"
+      }
+    }
+  },
+
+  "products": {
+    "subtitle": "Të gjitha produktet",
+    "title": "Karburantet Tona",
+    "description": "Cilësia dhe besueshmëria në çdo pikë karburanti.",
+    "prods": {
+      "crystal": {
+        "name": "Crystal Diesel",
+        "description": "Karburant diesel i rafinuar me pastërti kristalore. Formulim i avancuar me aditivë të fuqishëm që sigurojnë djegie optimale, motor të qetë dhe emision minimal.",
+        "badge": "Premium",
+        "specs": {
+          "label1": "ppm Squfur",
+          "label2": "Cetane",
+          "label3": "Pastërti"
+        }
+      },
+      "diesel": {
+        "name": "Euro Diesel",
+        "description": "Diesel në përputhje me standardet Euro 6. Ideal për flota moderne dhe transport afatgjatë me efiçiencë të lartë dhe kosto operative të reduktuara.",
+        "badge": "Euro 6",
+        "specs": {
+          "label1": "Standard",
+          "label2": "Cetane",
+          "label3": "CO₂"
+        }
+      },
+      "benzine": {
+        "name": "Unloaded",
+        "description": "Benzinë e lartë cilësie pa plumb për motorë modernë. Djegie e qëndrueshme, performancë e lartë dhe mbrojtje superiore e komponentëve të motorit.",
+        "badge": "Pa Plumb",
+        "specs": {
+          "label1": "RON",
+          "label2": "ppm Squfur",
+          "label3": "Efiçiencë"
+        }
+      },
+      "lpg": {
+        "name": "LPG",
+        "description": "Gaz i lëngshëm i naftës për automjete të konvertuara. Deri në 50% kosto më të ulëta se benzina, me emision të reduktuar dhe autonomi të zgjeruar.",
+        "badge": "Emision i Ulët",
+        "specs": {
+          "label1": "Kosto",
+          "label2": "CO₂",
+          "label3": "Disponueshëm"
+        }
+      }
+    }
+  },
+  "footer": {
+    "text": "Shitje me shumicë dhe pakicë, gjithashtu shpërndarje me porosi të disponueshme në të gjithë vendin.",
+    "button": "Kontakto Shitjet →"
+  }
+}

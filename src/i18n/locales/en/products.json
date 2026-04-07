@@ -1,0 +1,91 @@
+{
+  "hero": {
+    "subtitle": "Our Product Range",
+    "title1": "Fuel",
+    "title2": "Solutions",
+    "description": "From high-performance petrol to clean-burning LNG — refined with precision for every engine, every industry.",
+
+    "stats": {
+      "label1": "Products",
+      "label2": "Compliant",
+      "label3": "Delivery"
+    },
+
+    "products": {
+      "title": "Our Products",
+      "crystal": {
+        "cat": "diesel",
+        "name": "crystal diesel",
+        "text": "Refined diesel fuel with crystal-clear purity and minimal emissions.",
+        "spec": {
+          "label1": "ppm",
+          "label2": "Cetane",
+          "label3": "Purity"
+        }
+      },
+      "diesel": {
+        "cat": "diesel",
+        "name": "euro diesel"
+      },
+      "unloaded": {
+        "cat": "petrol",
+        "name": "petrol"
+      },
+      "lpg": {
+        "cat": "gas",
+        "name": "LPG"
+      }
+    }
+  },
+  "products": {
+    "subtitle": "All products",
+    "title": "Our Fuels",
+    "description": "Quality and reliability at every fuel station.",
+    "prods": {
+      "crystal": {
+        "name": "Crystal Diesel",
+        "description": "Refined diesel fuel with crystal-clear purity. Advanced formulation with powerful additives ensuring optimal combustion, smooth engine performance and minimal emissions.",
+        "badge": "Premium",
+        "specs": {
+          "label1": "ppm Sulphur",
+          "label2": "Cetane",
+          "label3": "Purity"
+        }
+      },
+      "diesel": {
+        "name": "Euro Diesel",
+        "description": "Diesel compliant with Euro 6 standards. Ideal for modern fleets and long-distance transport with high efficiency and reduced operating costs.",
+        "badge": "Euro 6",
+        "specs": {
+          "label1": "Standard",
+          "label2": "Cetane",
+          "label3": "CO₂"
+        }
+      },
+      "unloaded": {
+        "name": "Unleaded",
+        "description": "High-quality unleaded petrol for modern engines. Stable combustion, high performance and superior protection of engine components.",
+        "badge": "Unleaded",
+        "specs": {
+          "label1": "RON",
+          "label2": "ppm Sulphur",
+          "label3": "Efficiency"
+        }
+      },
+      "lpg": {
+        "name": "LPG",
+        "description": "Liquefied petroleum gas for converted vehicles. Up to 50% lower costs than petrol, with reduced emissions and extended range.",
+        "badge": "Low Emission",
+        "specs": {
+          "label1": "Cost",
+          "label2": "CO₂",
+          "label3": "Available"
+        }
+      }
+    }
+  },
+  "footer": {
+    "text": "Wholesale and retail sales, with order-based delivery available nationwide.",
+    "button": "Contact Sales →"
+  }
+}

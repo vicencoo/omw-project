@@ -1,11 +1,10 @@
 export const FUELS = [
   {
     id: 1,
-    name: 'Crystal Diesel',
+    name: 'crystal.name',
     image: '/images/fuels/crystal_diesel.avif',
-    description:
-      'Karburant diesel i rafinuar me pastërti kristalore. Formulim i avancuar me aditivë të fuqishëm që sigurojnë djegie optimale, motor të qetë dhe emision minimal.',
-    badge: 'Premium',
+    description: 'crystal.description',
+    badge: 'crystal.badge',
     cardHoverBg: 'hover:bg-amber-50/70',
     cardHoverBorder: 'hover:border-amber-500',
     badgeBg: 'bg-amber-50',
@@ -18,19 +17,18 @@ export const FUELS = [
     overlayGradient: 'bg-gradient-to-b from-transparent to-amber-500/20',
     span: 'md:col-span-7',
     specs: [
-      { val: '≤10', label: 'ppm Squfur' },
-      { val: '≥51', label: 'Cetane' },
-      { val: 'A++', label: 'Pastërti' },
+      { val: '+10', label: 'crystal.specs.label1' },
+      { val: '51+', label: 'crystal.specs.label2' },
+      { val: 'A++', label: 'crystal.specs.label3' },
     ],
   },
 
   {
     id: 2,
-    name: 'Euro Diesel',
+    name: 'diesel.name',
     image: '/images/fuels/euro_diesel.avif',
-    description:
-      'Diesel në përputhje me standardet Euro 6. Ideal për flota moderne dhe transport afatgjatë me efiçiencë të lartë dhe kosto operative të reduktuara.',
-    badge: 'Euro 6',
+    description: 'diesel.description',
+    badge: 'diesel.badge',
     cardHoverBg: 'hover:bg-sky-50/70',
     cardHoverBorder: 'hover:border-sky-600',
     badgeBg: 'bg-sky-50',
@@ -43,19 +41,18 @@ export const FUELS = [
     overlayGradient: 'bg-gradient-to-b from-transparent to-sky-600/20',
     span: 'md:col-span-5',
     specs: [
-      { val: 'Euro 6', label: 'Standard' },
-      { val: '≥51', label: 'Cetane' },
-      { val: '−12%', label: 'CO₂' },
+      { val: 'Euro 6', label: 'diesel.specs.label1' },
+      { val: '51+', label: 'diesel.specs.label2' },
+      { val: '−12%', label: 'diesel.specs.label3' },
     ],
   },
 
   {
     id: 3,
-    name: 'Benzinë',
+    name: 'benzine.name',
     image: '/images/fuels/unloaded.avif',
-    description:
-      'Benzinë e lartë cilësie pa plumb për motorë modernë. Djegie e qëndrueshme, performancë e lartë dhe mbrojtje superiore e komponentëve të motorit.',
-    badge: 'Pa Plumb',
+    description: 'benzine.description',
+    badge: 'benzine.badge',
     cardHoverBg: 'hover:bg-green-50/70',
     cardHoverBorder: 'hover:border-green-500',
     badgeBg: 'bg-green-50',
@@ -68,19 +65,18 @@ export const FUELS = [
     overlayGradient: 'bg-gradient-to-b from-transparent to-green-500/20',
     span: 'md:col-span-5',
     specs: [
-      { val: '95', label: 'RON' },
-      { val: '≤50', label: 'ppm Squfur' },
-      { val: '+3%', label: 'Efiçiencë' },
+      { val: '95', label: 'benzine.specs.label1' },
+      { val: '50+', label: 'benzine.specs.label2' },
+      { val: '+3%', label: 'benzine.specs.label3' },
     ],
   },
 
   {
     id: 4,
-    name: 'LPG',
+    name: 'lpg.name',
     image: '/images/fuels/lpg.avif',
-    description:
-      'Gaz i lëngshëm i naftës për automjete të konvertuara. Deri në 50% kosto më të ulëta se benzina, me emision të reduktuar dhe autonomi të zgjeruar.',
-    badge: 'Emision i Ulët',
+    description: 'lpg.description',
+    badge: 'lpg.badge',
     cardHoverBg: 'hover:bg-red-50/70',
     cardHoverBorder: 'hover:border-red-500',
     badgeBg: 'bg-red-50',
@@ -93,9 +89,9 @@ export const FUELS = [
     overlayGradient: 'bg-gradient-to-b from-transparent to-red-500/20',
     span: 'md:col-span-7',
     specs: [
-      { val: '−50%', label: 'Kosto' },
-      { val: '−15%', label: 'CO₂' },
-      { val: '24/7', label: 'Disponueshëm' },
+      { val: '−50%', label: 'lpg.specs.label1' },
+      { val: '−15%', label: 'lpg.specs.label2' },
+      { val: '24/7', label: 'lpg.specs.label3' },
     ],
   },
 ];

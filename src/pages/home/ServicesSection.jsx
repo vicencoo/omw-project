@@ -1,15 +1,17 @@
-import { Text } from '../../components/text';
-import { Reveal } from '../../components/reveal/Reveal';
+import { Text } from '../../components/Text';
+import { Reveal } from '../../components/Reveal';
 import { SERVICES } from '../../data/home/services';
+import { useTranslation } from 'react-i18next';
 
 export const ServicesSection = () => {
+  const { t } = useTranslation('home');
   return (
     <section className='container flex flex-col gap-10 py-10'>
       <div className='flex flex-col gap-5 max-w-2xl'>
         <div className='flex items-center gap-2'>
           <span className='flex w-9 h-[0.5px] bg-green-600' />
           <Text
-            text='Shërbimet Tona'
+            text={t('servicesSubtitle')}
             size='text-xs'
             font='font-medium font-serif'
             className='uppercase text-green-600 tracking-[0.2em]'
@@ -17,14 +19,14 @@ export const ServicesSection = () => {
         </div>
 
         <Text
-          text='Çdo gjë që ju nevojitet gjatë rrugës'
+          text={t('servicesTitle')}
           size='md:text-4xl text-2xl'
           font='font-medium font-serif'
           className='text-green-950 leading-snug italic'
         />
 
         <Text
-          text='Nga karburanti cilësor te shërbimet shtesë për automjetin dhe komoditetin tuaj, ne jemi këtu për ta bërë çdo ndalesë më të shpejtë, më të sigurt dhe më të dobishme.'
+          text={t('servicesDescription')}
           className='text-gray-600 md:max-w-xl'
         />
       </div>
@@ -39,13 +41,13 @@ export const ServicesSection = () => {
 
               <div className='flex flex-col gap-3'>
                 <Text
-                  text={service.title}
+                  text={t(service.title)}
                   size='text-xl'
                   font='font-semibold font-serif'
                   className='text-green-950'
                 />
                 <Text
-                  text={service.description}
+                  text={t(service.description)}
                   size='text-sm'
                   className='leading-6 text-gray-600'
                 />
