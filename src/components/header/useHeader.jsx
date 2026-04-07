@@ -4,13 +4,18 @@ import { LOCALE } from '../../data/home/locale';
 import i18n from '../../i18n';
 
 export const useHeader = () => {
-  const [selectedLocale, setSelectedLocale] = useState(LOCALE[0]);
+  const currentLanguage =
+    i18n.language || localStorage.getItem('language') || 'sq';
+
+  const [selectedLocale, setSelectedLocale] = useState(
+    LOCALE.find((locale) => locale.lang === currentLanguage) || LOCALE[0],
+  );
+
   const { isOpen, toggle, close, ref: wrapperRef } = useDisclosure();
 
   const handleChangeLocale = (lang) => {
     close();
     setSelectedLocale(lang);
-
     i18n.changeLanguage(lang.lang);
   };
 
