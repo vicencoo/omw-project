@@ -1,4 +1,3 @@
-import { ServicesSection } from '../home/ServicesSection';
 import { Reveal } from '../../components/Reveal';
 import { Text } from '../../components/Text';
 import { useTranslation } from 'react-i18next';
@@ -6,6 +5,7 @@ import { Collaborate } from './Collaborate';
 import { ValuesSection } from './ValuesSection';
 import { StorySection } from './StorySection';
 import { StatsSection } from './StatsSection';
+import { ServicesSection } from '../../components/ServicesSection';
 
 export const AboutUs = () => {
   const { t } = useTranslation('about');

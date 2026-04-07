@@ -6,9 +6,9 @@ import { homeStats } from '../../data/home/statistics';
 import { FuelSlider } from './FuelSlider';
 import { MoveRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { ServicesSection } from './ServicesSection';
 import { useTranslation } from 'react-i18next';
 import { getHeroFeatures } from '../../data/home/heroFeatures';
+import { ServicesSection } from '../../components/ServicesSection';
 
 export const Home = () => {
   const { t } = useTranslation('home');

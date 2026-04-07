@@ -1,7 +1,7 @@
-import { Text } from '../../components/Text';
-import { Reveal } from '../../components/Reveal';
-import { SERVICES } from '../../data/home/services';
 import { useTranslation } from 'react-i18next';
+import { Text } from './Text';
+import { SERVICES } from '../data/home/services';
+import { Reveal } from './Reveal';
 
 export const ServicesSection = () => {
   const { t } = useTranslation('home');
