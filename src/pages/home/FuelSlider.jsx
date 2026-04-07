@@ -4,52 +4,60 @@ import { FUELS } from '../../data/fuels/fuels';
 
 export const FuelSlider = () => {
   const sliderRef = useRef(null);
-  const dragState = useRef({ isDown: false, startX: 0, scrollLeft: 0 });
+  const dragState = useRef({
+    isDown: false,
+    startX: 0,
+    scrollLeft: 0,
+  });
   const [isDragging, setIsDragging] = useState(false);
 
-  const handleMouseDown = useCallback((e) => {
+  const handlePointerDown = useCallback((e) => {
     const slider = sliderRef.current;
     if (!slider) return;
+
     dragState.current = {
       isDown: true,
-      startX: e.pageX,
+      startX: e.clientX,
       scrollLeft: slider.scrollLeft,
     };
+
+    setIsDragging(false);
   }, []);
 
-  const handleMouseUp = useCallback(() => {
+  const handlePointerUp = useCallback(() => {
     dragState.current.isDown = false;
     setIsDragging(false);
   }, []);
 
-  const handleMouseLeave = useCallback(() => {
-    dragState.current.isDown = false;
-    setIsDragging(false);
-  }, []);
-
-  const handleMouseMove = useCallback((e) => {
+  const handlePointerMove = useCallback((e) => {
     const slider = sliderRef.current;
     const state = dragState.current;
+
     if (!slider || !state.isDown) return;
-    e.preventDefault();
-    const dx = e.pageX - state.startX;
-    if (Math.abs(dx) > 5) setIsDragging(true);
+
+    const dx = e.clientX - state.startX;
+
+    if (Math.abs(dx) > 5) {
+      setIsDragging(true);
+    }
+
     slider.scrollLeft = state.scrollLeft - dx;
   }, []);
 
   return (
-    <section className='w-screen relative left-1/2 -translate-x-1/2'>
+    <section className='w-screen relative left-1/2 -translate-x-1/2 overflow-x-hidden'>
       <div
         ref={sliderRef}
-        onMouseDown={handleMouseDown}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeave}
-        onMouseMove={handleMouseMove}
+        onPointerDown={handlePointerDown}
+        onPointerUp={handlePointerUp}
+        onPointerLeave={handlePointerUp}
+        onPointerCancel={handlePointerUp}
+        onPointerMove={handlePointerMove}
         className={`
-    flex gap-6 overflow-x-auto
-    hide-scrollbar py-4 select-none overscroll-x-contain
-    ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}
-  `}
+          flex gap-6 overflow-x-auto overflow-y-hidden
+          hide-scrollbar py-4 select-none overscroll-x-contain
+          ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}
+        `}
         style={{
           WebkitOverflowScrolling: 'touch',
           touchAction: 'pan-x',
@@ -59,7 +67,7 @@ export const FuelSlider = () => {
 
         {FUELS.map((fuel) => (
           <Reveal key={fuel.id}>
-            <article className='group relative h-100 w-70 md:h-120 md:w-85 shrink-0 overflow-hidden rounded-4xl shadow-lg hide-scrollbar'>
+            <article className='group relative h-100 w-70 md:h-120 md:w-85 shrink-0 overflow-hidden rounded-4xl shadow-lg'>
               <img
                 src={fuel.image}
                 alt={fuel.name}
