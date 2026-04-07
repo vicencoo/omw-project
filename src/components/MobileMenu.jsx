@@ -27,8 +27,8 @@ export const MobileMenu = ({ t }) => {
               className={({ isActive }) =>
                 `uppercase text-sm font-medium tracking-wide rounded-md p-3 transition-colors duration-200 ${
                   isActive
-                    ? 'text-green-700  border-b border-green-200'
-                    : 'text-gray-600 hover:text-green-700 hover:border-b border-green-200'
+                    ? 'text-green-700  border-b-2 border-green-300'
+                    : 'text-gray-600 hover:text-green-700 hover:border-b2 border-green-300'
                 }`
               }
             >
