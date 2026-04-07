@@ -4,7 +4,7 @@ import { HeaderItems } from '../constants/headerItems';
 import { useDisclosure } from '../hooks/useDisclosure';
 import { Text } from './Text';
 
-export const MobileMenu = () => {
+export const MobileMenu = ({ t }) => {
   const { toggle, close, isOpen, ref: wrapperRef } = useDisclosure();
   const navigate = useNavigate();
   return (
@@ -24,7 +24,7 @@ export const MobileMenu = () => {
                 close();
               }}
             >
-              <Text text={item.label} size='text-sm' font='font-medium' />
+              <Text text={t(item.label)} size='text-sm' font='font-medium' />
             </span>
           ))}
         </div>

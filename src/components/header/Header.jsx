@@ -74,7 +74,7 @@ export const Header = () => {
             </div>
           </div>
 
-          <MobileMenu />
+          <MobileMenu t={t} />
         </div>
       </div>
     </div>
