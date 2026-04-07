@@ -21,8 +21,8 @@ export const Cards_Info = [
   },
   {
     id: 3,
-    cat: 'hero.products.unloaded.cat',
-    name: 'hero.products.unloaded.name',
+    cat: 'hero.products.petrol.cat',
+    name: 'hero.products.petrol.name',
     hoverBg: 'hover:bg-green-50/60',
     hoverBorder: 'hover:border-green-500',
     lineBg: 'bg-green-500',

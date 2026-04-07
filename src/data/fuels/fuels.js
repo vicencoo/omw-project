@@ -49,10 +49,10 @@ export const FUELS = [
 
   {
     id: 3,
-    name: 'benzine.name',
+    name: 'petrol.name',
     image: '/images/fuels/unloaded.avif',
-    description: 'benzine.description',
-    badge: 'benzine.badge',
+    description: 'petrol.description',
+    badge: 'petrol.badge',
     cardHoverBg: 'hover:bg-green-50/70',
     cardHoverBorder: 'hover:border-green-500',
     badgeBg: 'bg-green-50',
@@ -65,9 +65,9 @@ export const FUELS = [
     overlayGradient: 'bg-gradient-to-b from-transparent to-green-500/20',
     span: 'md:col-span-5',
     specs: [
-      { val: '95', label: 'benzine.specs.label1' },
-      { val: '50+', label: 'benzine.specs.label2' },
-      { val: '+3%', label: 'benzine.specs.label3' },
+      { val: '95', label: 'petrol.specs.label1' },
+      { val: '50+', label: 'petrol.specs.label2' },
+      { val: '+3%', label: 'petrol.specs.label3' },
     ],
   },
 

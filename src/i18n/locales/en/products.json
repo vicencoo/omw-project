@@ -22,7 +22,7 @@
         "cat": "diesel",
         "name": "euro diesel"
       },
-      "unloaded": {
+      "petrol": {
         "cat": "petrol",
         "name": "petrol"
       },
@@ -57,10 +57,10 @@
           "label3": "CO₂"
         }
       },
-      "unloaded": {
-        "name": "Unleaded",
+      "petrol": {
+        "name": "Petrol",
         "description": "High-quality unleaded petrol for modern engines. Stable combustion, high performance and superior protection of engine components.",
-        "badge": "Unleaded",
+        "badge": "Petrol",
         "specs": {
           "label1": "RON",
           "label2": "ppm Sulphur",

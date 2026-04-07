@@ -1,7 +1,6 @@
 import { Reveal } from '../../components/Reveal';
 
 export const ServiceCard = ({ s, t }) => {
-  console.log(s);
   const tags = t(`offers.${s.tags}`, { returnObjects: true });
 
   return (

@@ -22,7 +22,7 @@
         "cat": "diesel",
         "name": "euro diesel"
       },
-      "unloaded": {
+      "petrol": {
         "cat": "benzinë",
         "name": "benzinë"
       },
@@ -58,10 +58,10 @@
           "label3": "CO₂"
         }
       },
-      "benzine": {
-        "name": "Unloaded",
+      "petrol": {
+        "name": "Benzinë",
         "description": "Benzinë e lartë cilësie pa plumb për motorë modernë. Djegie e qëndrueshme, performancë e lartë dhe mbrojtje superiore e komponentëve të motorit.",
-        "badge": "Pa Plumb",
+        "badge": "Benzinë",
         "specs": {
           "label1": "RON",
           "label2": "ppm Squfur",
