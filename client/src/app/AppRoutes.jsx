@@ -6,6 +6,8 @@ import { Locations } from '../pages/locations/Locations';
 import { Products } from '../pages/products/Products';
 import { Services } from '../pages/services/Services';
 import { Contact } from '../pages/contact/Contact';
+import { Prices } from '../pages/prices/Prices';
+import { ManagePrices } from '../pages/managePrices/ManagePrices';
 
 export const AppRoutes = () => {
   return (
@@ -13,10 +15,13 @@ export const AppRoutes = () => {
       <Route element={<Layout />}>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<AboutUs />} />
+        <Route path='/prices' element={<Prices />} />
         <Route path='/locations' element={<Locations />} />
         <Route path='/products' element={<Products />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
+
+        <Route path='/manage-prices' element={<ManagePrices />} />
       </Route>
     </Routes>
   );

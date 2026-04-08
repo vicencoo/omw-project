@@ -2,6 +2,7 @@
   "nav": {
     "home": "Kreu",
     "about": "Rreth Nesh",
+    "prices": "Çmimet",
     "products": "Produktet",
     "locations": "Pikat Tona",
     "services": "Shërbimet",
@@ -22,7 +23,7 @@
     "contactLabel2": "telefon",
     "contactLabel3": "email",
     "contactLabel4": "orari i zyrës",
-    "contactText1": "Rruga Deshmorët e 4 Shkurtit, Sky Tower Kati 7/3, Tiranë",
+    "contactText1": "Rruga Dëshmorët e 4 Shkurtit, Sky Tower Kati 7/3, Tiranë",
     "contactText2": "+355 4 222 1666/177",
     "contactText3": "legal@atoil.al",
     "contactText4": "24/7 Hapur",
