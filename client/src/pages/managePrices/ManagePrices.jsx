@@ -140,7 +140,7 @@ export const ManagePrices = () => {
       </div>
 
       {/* Station cards */}
-      <div className='flex flex-col gap-4'>
+      <div className='grid md:grid-cols-3 gap-5'>
         {stations.map((station, si) => (
           <div
             key={station.id}
