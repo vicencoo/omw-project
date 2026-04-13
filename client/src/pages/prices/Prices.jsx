@@ -2,13 +2,12 @@ import { useState } from 'react';
 import { StationPriceCard } from './StationPriceCard';
 import { useTranslation } from 'react-i18next';
 import { fuels } from '../../constants/pricesFuels';
-// import { Input } from '../../components/Input';
-// import { Button } from '../../components/Button';
 import { usePrices } from './usePrices';
+import { StationPriceCardSkeleton } from './StationPriceCardSkeleton';
 
 export const Prices = () => {
   const { t } = useTranslation('common');
-  const { stations } = usePrices();
+  const { stations, loading } = usePrices();
 
   const [now] = useState(new Date());
   const dateStr = now.toLocaleDateString('sq-AL', {
@@ -151,9 +150,18 @@ export const Prices = () => {
       </div>
 
       {/* Station rows */}
-      <div className='flex flex-col md:gap-0 gap-5'>
+      {/* <div className='flex flex-col md:gap-0 gap-5'>
         {stations &&
           stations.map((s, i) => <StationPriceCard s={s} i={i} key={s.id} />)}
+      </div> */}
+      <div className='flex flex-col md:gap-0 gap-5'>
+        {loading
+          ? Array.from({ length: 5 }).map((_, i) => (
+              <StationPriceCardSkeleton key={i} />
+            ))
+          : stations?.map((s, i) => (
+              <StationPriceCard s={s} i={i} key={s.id} />
+            ))}
       </div>
     </div>
   );

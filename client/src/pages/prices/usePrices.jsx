@@ -15,6 +15,7 @@ import { axios } from '../../api/axios';
 export const usePrices = () => {
   // const [station, setStation] = useState(Location);
   const [stations, setStations] = useState([]);
+  const [loading, setIsLoading] = useState(true);
 
   const getStations = async () => {
     try {
@@ -24,6 +25,8 @@ export const usePrices = () => {
       }
     } catch (err) {
       console.error(err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -32,8 +35,6 @@ export const usePrices = () => {
       await getStations();
     })();
   }, []);
-
-  console.log(stations);
 
   // const changeValue = (key, value) => {
   //   setStation((prev) => ({
@@ -71,6 +72,7 @@ export const usePrices = () => {
 
   return {
     stations,
+    loading,
     //  changeValue, changeStationPrice, station, submitStation
   };
 };

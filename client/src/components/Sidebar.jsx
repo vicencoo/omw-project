@@ -33,9 +33,9 @@ export const Sidebar = ({ items = [] }) => {
   if (!isAuthenticated) return null;
 
   return (
-    <div className='fixed top-0 -left-14 h-screen z-2100' ref={wrapperRef}>
+    <div className='fixed inset-y-0 left-0 z-[2100]' ref={wrapperRef}>
       <button
-        className='absolute top-5 left-20 z-50 cursor-pointer transition-all duration-300 hover:scale-110 will-change-transform'
+        className='absolute top-5 left-5 z-50 cursor-pointer transition-all duration-300 hover:scale-110 will-change-transform'
         onClick={toggle}
         type='button'
       >
@@ -43,15 +43,15 @@ export const Sidebar = ({ items = [] }) => {
       </button>
 
       <div
-        className={`flex flex-col bg-green-950 h-screen px-3 pt-24 pb-4 text-nowrap
+        className={`flex flex-col bg-green-950 h-dvh px-3 pt-24 pb-4 text-nowrap
           overflow-hidden transition-all duration-300 shadow-2xl
           ${
             isOpen
-              ? 'w-60 opacity-100 translate-x-14'
-              : 'w-0 opacity-0 -translate-x-10'
+              ? 'w-60 opacity-100 translate-x-0'
+              : 'w-0 opacity-0 -translate-x-full'
           }`}
       >
-        <div className='flex flex-col gap-1 flex-1'>
+        <div className='flex flex-col gap-1 flex-1 overflow-y-auto'>
           {items.map((item) => {
             const isActive = location.pathname === item.path;
 

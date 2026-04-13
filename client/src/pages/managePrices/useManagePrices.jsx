@@ -5,6 +5,7 @@ export const useManagePrices = () => {
   const [stations, setStations] = useState([]);
   const [editing, setEditing] = useState(null);
   const [disableButton, setDisableButton] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const getPrices = async () => {
     try {
@@ -14,6 +15,8 @@ export const useManagePrices = () => {
       }
     } catch (err) {
       console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -76,5 +79,6 @@ export const useManagePrices = () => {
     editing,
     cancelEdit,
     disableButton,
+    loading,
   };
 };

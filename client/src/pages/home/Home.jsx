@@ -36,6 +36,7 @@ export const Home = () => {
                 className='text-green-900 leading-snug italic'
               />
               <Text text={t('heroDescription')} className='md:max-w-120' />
+
               <div className='flex md:flex-row flex-col gap-4'>
                 <Button
                   name={t('findNearest')}
@@ -45,6 +46,17 @@ export const Home = () => {
                   border='transparent'
                   borderHover='#1e8449'
                   onClick={() => navigate('/locations')}
+                />
+
+                <Button
+                  name={t('viewPrices')}
+                  bgColor='transparent'
+                  bgHover='#dcfce7'
+                  color='#166534'
+                  hoverColor='#166534'
+                  border='#16a34a'
+                  borderHover='#16a34a'
+                  onClick={() => navigate('/prices')}
                 />
               </div>
             </div>
