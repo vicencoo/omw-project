@@ -30,10 +30,10 @@ export const Sidebar = ({ items = [] }) => {
     navigate('/');
   };
 
-  if (!isAuthenticated) return null;
+  // if (!isAuthenticated) return null;
 
   return (
-    <div className='fixed inset-y-0 left-0 z-[2100]' ref={wrapperRef}>
+    <div className='fixed inset-y-0 left-0 z-2200' ref={wrapperRef}>
       <button
         className='absolute top-5 left-5 z-50 cursor-pointer transition-all duration-300 hover:scale-110 will-change-transform'
         onClick={toggle}

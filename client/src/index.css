@@ -45,3 +45,24 @@ body {
   border: 1.5px solid rgba(45, 186, 95, 0.5);
   animation: ring 3s ease-out infinite;
 }
+
+/* body.dash-open #root {
+  margin-left: var(--dash-width);
+}
+
+@media (max-width: 999px) {
+  body.dash-open #root {
+    margin-left: 0;
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+} */

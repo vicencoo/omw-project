@@ -10,20 +10,17 @@ export const Layout = () => {
   const SIDEBAR_ITEMS = getSidebarItems(t);
 
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex min-h-screen flex-col'>
       <Header />
-      <div className='flex flex-1'>
-        {/* <main className='flex-1'>
-          <Outlet />
-        </main> */}
-        <div className='flex flex-1'>
-          <Sidebar items={SIDEBAR_ITEMS} />
 
-          <main className='flex-1'>
-            <Outlet />
-          </main>
-        </div>
+      <div className='flex flex-1'>
+        <Sidebar items={SIDEBAR_ITEMS} />
+
+        <main className='flex-1'>
+          <Outlet />
+        </main>
       </div>
+
       <Footer />
     </div>
   );
