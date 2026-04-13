@@ -67,7 +67,7 @@ export const StorySection = ({ t }) => {
               {/* Year badge */}
               <div className='absolute md:-bottom-6 -bottom-8 md:-left-6 -left-4 bg-green-950 text-white px-6 py-4 rounded-xl shadow-lg'>
                 <span className='block text-3xl font-serif font-bold text-amber-400'>
-                  2009
+                  2013
                 </span>
                 <span className='text-xs text-green-400 uppercase tracking-wider'>
                   {t('story.established')}

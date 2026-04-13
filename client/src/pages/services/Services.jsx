@@ -41,7 +41,7 @@ export const Services = () => {
               />
               <div className='h-px flex-1 bg-green-200' />
               <span className='text-green-500 text-xs tracking-widest'>
-                EST. 2009
+                EST. 2013
               </span>
             </div>
 
