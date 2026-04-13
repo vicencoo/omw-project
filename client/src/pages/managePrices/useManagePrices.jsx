@@ -4,6 +4,7 @@ import { axios } from '../../api/axios';
 export const useManagePrices = () => {
   const [stations, setStations] = useState([]);
   const [editing, setEditing] = useState(null);
+  const [disableButton, setDisableButton] = useState(false);
 
   const getPrices = async () => {
     try {
@@ -40,6 +41,7 @@ export const useManagePrices = () => {
 
   const confirmEdit = async () => {
     if (!editing) return;
+    setDisableButton(true);
 
     const value = editing.value?.trim();
 
@@ -57,6 +59,8 @@ export const useManagePrices = () => {
       cancelEdit();
     } catch (err) {
       console.error(err);
+    } finally {
+      setDisableButton(false);
     }
   };
 
@@ -71,5 +75,6 @@ export const useManagePrices = () => {
     startEdit,
     editing,
     cancelEdit,
+    disableButton,
   };
 };

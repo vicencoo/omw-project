@@ -29,12 +29,24 @@ exports.addStation = async (req, res) => {
 
 exports.getStations = async (req, res) => {
   try {
+    // const stations = await Station.findAll({
+    //   include: [
+    //     {
+    //       model: Price,
+    //       as: 'station_prices',
+    //     },
+    //   ],
+    // });
     const stations = await Station.findAll({
       include: [
         {
           model: Price,
           as: 'station_prices',
         },
+      ],
+      order: [
+        ['id', 'ASC'],
+        [{ model: Price, as: 'station_prices' }, 'id', 'ASC'],
       ],
     });
 

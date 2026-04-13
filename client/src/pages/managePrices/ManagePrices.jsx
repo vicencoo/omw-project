@@ -52,6 +52,7 @@ export const ManagePrices = () => {
     startEdit,
     editing,
     cancelEdit,
+    disableButton,
   } = useManagePrices();
   const { t } = useTranslation('common');
 
@@ -104,7 +105,7 @@ export const ManagePrices = () => {
 
                 return (
                   <div
-                    key={priceItem.id}
+                    key={`${station.id}-${priceItem.id}`}
                     className={`flex items-center justify-between rounded-xl px-4 py-2.5 border transition-all duration-200 ${c.border} ${c.bg}`}
                   >
                     <div className='flex items-center gap-2.5 w-36'>
@@ -147,6 +148,7 @@ export const ManagePrices = () => {
                         <>
                           <button
                             onClick={confirmEdit}
+                            disabled={disableButton}
                             className='w-7 h-7 rounded-lg bg-green-100 hover:bg-green-200 flex items-center justify-center transition-colors'
                           >
                             <Check size={13} className='text-green-700' />
