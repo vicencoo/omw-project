@@ -13,22 +13,30 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
-const allowedOrigins = [
-  process.env.REQUEST_ORIGIN,
-  process.env.REQUEST_ORIGIN_LOCAL,
-].filter(Boolean);
+// const allowedOrigins = [
+//   process.env.REQUEST_ORIGIN,
+//   process.env.REQUEST_ORIGIN_LOCAL,
+// ].filter(Boolean);
+
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       if (!origin || allowedOrigins.includes(origin)) {
+//         return callback(null, true);
+//       }
+//       return callback(new Error(`Not allowed by CORS: ${origin}`));
+//     },
+//     credentials: true,
+//     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+//     allowedHeaders: ['Content-Type', 'Authorization'],
+//   }),
+// );
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-      return callback(new Error(`Not allowed by CORS: ${origin}`));
-    },
+    origin: process.env.REQUEST_ORIGIN,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
   }),
 );
 
