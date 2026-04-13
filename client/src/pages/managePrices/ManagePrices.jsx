@@ -1,6 +1,7 @@
 import { Pencil, Check, X, MapPin, Fuel } from 'lucide-react';
 import { useManagePrices } from './useManagePrices';
 import { useTranslation } from 'react-i18next';
+import { ManagePricesSkeleton } from './ManagePricesSkeleton';
 
 const fuelStyles = {
   'euro diesel': {
