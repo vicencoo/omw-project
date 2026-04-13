@@ -90,7 +90,7 @@ export const Prices = () => {
         </h1>
 
         {/*  */}
-        <div>
+        <div className='flex flex-col gap-3'>
           <Input
             value={station.city}
             onChange={(e) => changeValue('city', e.target.value)}
@@ -117,6 +117,7 @@ export const Prices = () => {
               </div>
             ))}
           </div>
+          <Button name={'submit station'} onClick={submitStation} />
         </div>
         {/*  */}
 
