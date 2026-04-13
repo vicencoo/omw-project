@@ -4,9 +4,11 @@ import { Contact_Info } from '../../data/contact/contactInfo';
 import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { useTranslation } from 'react-i18next';
+import { useContact } from './useContact';
 
 export const Contact = () => {
   const { t } = useTranslation('common', 'contact');
+  const { changeInputValue, email, submit, errors, isDisabled } = useContact();
   return (
     <div className='grid md:grid-cols-2 container gap-10 py-20'>
       <div className='flex flex-col gap-7'>
@@ -51,27 +53,42 @@ export const Contact = () => {
         <div className='flex md:flex-row flex-col gap-4 w-full'>
           <Input
             label={t('contact:name')}
+            value={email.name}
+            onChange={(e) => changeInputValue('name', e.target.value)}
             placeholder={t('contact:namePlaceholder')}
             className={'flex-1'}
+            error={errors.name}
           />
           <Input
             label={t('contact:surname')}
+            value={email.surname}
+            onChange={(e) => changeInputValue('surname', e.target.value)}
             placeholder={t('contact:surnamePlaceholder')}
             className={'flex-1'}
+            error={errors.surname}
           />
         </div>
         <Input
           label={t('contact:email')}
+          value={email.email}
+          onChange={(e) => changeInputValue('email', e.target.value)}
           placeholder={t('contact:emailPlaceholder')}
+          error={errors.email}
         />
         <Input
           label={t('contact:subject')}
+          value={email.subject}
+          onChange={(e) => changeInputValue('subject', e.target.value)}
           placeholder={t('contact:subjectPlaceholder')}
+          error={errors.subject}
         />
         <Input
           label={t('contact:message')}
           multiline
+          value={email.message}
+          onChange={(e) => changeInputValue('message', e.target.value)}
           placeholder={t('contact:messagePlaceholder')}
+          error={errors.message}
         />
 
         <div className='flex justify-start'>
@@ -83,6 +100,8 @@ export const Contact = () => {
             color='white'
             borderHover='#166534'
             border='transparent'
+            onClick={submit}
+            disabled={isDisabled}
           />
         </div>
       </div>

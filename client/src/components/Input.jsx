@@ -7,6 +7,7 @@ export const Input = ({
   multiline = false,
   onChange,
   type = 'text',
+  error,
   name,
   className,
 }) => {
@@ -46,6 +47,14 @@ export const Input = ({
     placeholder:text-[rgba(122,170,138,0.5)]
    ${className}`}
           placeholder={placeholder}
+        />
+      )}
+      {error && (
+        <Text
+          text={error}
+          size='text-xs'
+          font='font-medium'
+          className='text-red-500'
         />
       )}
     </div>

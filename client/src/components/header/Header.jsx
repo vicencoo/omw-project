@@ -20,6 +20,7 @@ export const Header = () => {
       <div className='container flex w-full items-center justify-between py-3'>
         {/*  */}
         <OmwLogo className={isAuthenticated ? 'hidden lg:flex' : ''} />
+        <span className='lg:hidden flex' />
         {/* <OmwLogo /> */}
 
         <div className='hidden md:flex gap-10 '>

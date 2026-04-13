@@ -13,10 +13,11 @@
     "label1": "Company",
     "label2": "Contact",
     "item1": "About Us",
-    "item2": "Our Locations",
-    "item3": "Products",
-    "item4": "Services",
-    "item5": "Contact Us"
+    "item2": "Prices",
+    "item3": "Our Locations",
+    "item4": "Products",
+    "item5": "Services",
+    "item6": "Contact Us"
   },
   "contact": {
     "contactLabel1": "Head Office",

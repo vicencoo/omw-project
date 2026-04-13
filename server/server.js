@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser');
 
 const userRoutes = require('./routes/userRoutes');
 const priceRoutes = require('./routes/priceRoutes');
+const contactRoutes = require('./routes/contactRoutes');
 
 app.use(express.json());
 app.use(cookieParser());
@@ -42,6 +43,7 @@ app.use(
 
 app.use(userRoutes);
 app.use(priceRoutes);
+app.use(contactRoutes);
 
 const port = process.env.PORT || 8000;
 
