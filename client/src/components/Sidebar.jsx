@@ -30,7 +30,7 @@ export const Sidebar = ({ items = [] }) => {
     navigate('/');
   };
 
-  // if (!isAuthenticated) return null;
+  if (!isAuthenticated) return null;
 
   return (
     <div className='fixed inset-y-0 left-0 z-2200' ref={wrapperRef}>
