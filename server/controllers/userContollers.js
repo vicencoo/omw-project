@@ -36,6 +36,7 @@ exports.login = async (req, res) => {
     res.json({ message: 'Logged in successfully.', token });
   } catch (err) {
     console.error(err);
+    return res.status(500).json({ message: 'Failed to login user.' });
   }
 };
 
@@ -60,5 +61,6 @@ exports.addUser = async (req, res) => {
     res.json({ message: 'User Created!' });
   } catch (err) {
     console.error('Error adding user', err);
+    return res.status(500).json({ message: 'Failed to create user.' });
   }
 };
