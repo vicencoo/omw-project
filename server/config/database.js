@@ -14,9 +14,11 @@
 // module.exports = sequelize;
 
 const Sequelize = require('sequelize');
+const pg = require('pg');
 
 const sequelize = new Sequelize(process.env.SUPABASE_DB_URL, {
   dialect: 'postgres',
+  dialectModule: pg,
   protocol: 'postgres',
   logging: false,
   dialectOptions: {
