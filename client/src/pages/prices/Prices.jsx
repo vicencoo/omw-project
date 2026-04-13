@@ -2,14 +2,13 @@ import { useState } from 'react';
 import { StationPriceCard } from './StationPriceCard';
 import { useTranslation } from 'react-i18next';
 import { fuels } from '../../constants/pricesFuels';
-import { Input } from '../../components/Input';
-import { Button } from '../../components/Button';
+// import { Input } from '../../components/Input';
+// import { Button } from '../../components/Button';
 import { usePrices } from './usePrices';
 
 export const Prices = () => {
   const { t } = useTranslation('common');
-  const { stations, changeStationPrice, changeValue, station, submitStation } =
-    usePrices();
+  const { stations } = usePrices();
 
   const [now] = useState(new Date());
   const dateStr = now.toLocaleDateString('sq-AL', {
@@ -90,7 +89,7 @@ export const Prices = () => {
         </h1>
 
         {/*  */}
-        <div className='flex flex-col gap-3'>
+        {/* <div className='flex flex-col gap-3'>
           <Input
             value={station.city}
             onChange={(e) => changeValue('city', e.target.value)}
@@ -119,7 +118,7 @@ export const Prices = () => {
           </div>
           <Button name={'submit station'} onClick={submitStation} />
         </div>
-        {/*  */}
+         */}
 
         {/* Legend chips */}
         <div className='flex flex-wrap md:gap-3 gap-1'>
