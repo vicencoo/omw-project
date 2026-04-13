@@ -8,7 +8,8 @@ import { usePrices } from './usePrices';
 
 export const Prices = () => {
   const { t } = useTranslation('common');
-  const { stations } = usePrices();
+  const { stations, changeStationPrice, changeValue, station, submitStation } =
+    usePrices();
 
   const [now] = useState(new Date());
   const dateStr = now.toLocaleDateString('sq-AL', {
@@ -87,6 +88,37 @@ export const Prices = () => {
           {t('prices.header_text_3')}{' '}
           <span style={{ color: '#c17d2e' }}>.</span>
         </h1>
+
+        {/*  */}
+        <div>
+          <Input
+            value={station.city}
+            onChange={(e) => changeValue('city', e.target.value)}
+          />
+          <Input
+            value={station.area}
+            onChange={(e) => changeValue('area', e.target.value)}
+          />
+          <div className='grid grid-cols-2 gap-4'>
+            {station.station_prices.map((sp, i) => (
+              <div key={i} className='flex items-center gap-2 mb-2'>
+                <Input
+                  value={sp.fuel}
+                  onChange={(e) =>
+                    changeStationPrice(i, 'fuel', e.target.value)
+                  }
+                />
+                <Input
+                  value={sp.price}
+                  onChange={(e) =>
+                    changeStationPrice(i, 'price', e.target.value)
+                  }
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        {/*  */}
 
         {/* Legend chips */}
         <div className='flex flex-wrap md:gap-3 gap-1'>

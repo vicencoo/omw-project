@@ -29,13 +29,13 @@ export const useLogin = () => {
     setIsLogging(true);
     try {
       setError('');
-      // const res = await axios.post('/login', user);
-      const res = await axios.post('/add-user', user);
-      // if (res.data) {
-      //   localStorage.setItem('token', res.data.token);
-      //   navigate('/manage-prices');
-      //   setUser(defaultUser);
-      // }
+      const res = await axios.post('/login', user);
+      // const res = await axios.post('/add-user', user);
+      if (res.data) {
+        localStorage.setItem('token', res.data.token);
+        navigate('/manage-prices');
+        setUser(defaultUser);
+      }
     } catch (err) {
       setError(
         err.response?.data?.message || 'Something went wrong. Try again.',
