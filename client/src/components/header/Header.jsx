@@ -7,17 +7,21 @@ import { MobileMenu } from '../MobileMenu';
 import { HeaderItems } from '../../constants/headerItems';
 import { OmwLogo } from '../OmwLogo';
 import { useTranslation } from 'react-i18next';
+import { isAdminAuthenticated } from '../../utils/auth';
 
 export const Header = () => {
   const { selectedLocale, handleChangeLocale, isOpen, toggle, wrapperRef } =
     useHeader();
   const { t } = useTranslation('common');
+  const { isAuthenticated } = isAdminAuthenticated();
 
   return (
     <div className='sticky top-0 z-2000 flex w-full bg-white border-b border-green-100 shadow-sm shadow-green-100/50'>
       <div className='container flex w-full items-center justify-between py-3'>
         {/*  */}
-        <OmwLogo />
+        <OmwLogo className={isAuthenticated ? 'hidden lg:flex' : ''} />
+        {/* <OmwLogo /> */}
+
         <div className='hidden md:flex gap-10 '>
           {HeaderItems.map((item) => (
             <NavLink

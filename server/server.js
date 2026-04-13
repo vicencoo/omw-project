@@ -6,28 +6,13 @@ const cors = require('cors');
 const app = express();
 const cookieParser = require('cookie-parser');
 
-// const startInsuranceReminder = require('./utils/insuranceReminder');
-
-// const propertyRoutes = require('./routes/propertyRoutes');
-// const planeTicketRoutes = require('./routes/planeTicketRoutes');
-// const packageRoutes = require('./routes/touristPackageRoutes');
-// const destinationRoutes = require('./routes/destinationRoutes');
-// const authRoutes = require('./routes/authRoutes');
-// const bookingRoutes = require('./routes/bookingRoutes');
-// const dashboardRoutes = require('./routes/dashboardRoutes');
-// const insuranceRoutes = require('./routes/insuranceRoutes');
-// const contactRoutes = require('./routes/contactRoutes');
+const userRoutes = require('./routes/userRoutes');
+const priceRoutes = require('./routes/priceRoutes');
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
-// app.use(
-//   cors({
-//     origin: process.env.REQUEST_ORIGIN,
-//     // origin: process.env.REQUEST_ORIGIN_NETWORK,
-//     credentials: true,
-//   }),
-// );
+
 const allowedOrigins = [
   process.env.REQUEST_ORIGIN,
   process.env.REQUEST_ORIGIN_LOCAL,
@@ -47,15 +32,8 @@ app.use(
   }),
 );
 
-// app.use(propertyRoutes);
-// app.use(planeTicketRoutes);
-// app.use(packageRoutes);
-// app.use(destinationRoutes);
-// app.use(authRoutes);
-// app.use(bookingRoutes);
-// app.use(dashboardRoutes);
-// app.use(insuranceRoutes);
-// app.use(contactRoutes);
+app.use(userRoutes);
+app.use(priceRoutes);
 
 const port = process.env.PORT || 8000;
 

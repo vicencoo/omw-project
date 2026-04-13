@@ -2,9 +2,13 @@ import { Outlet } from 'react-router-dom';
 import { Header } from '../components/header/Header';
 import { Footer } from '../components/Footer';
 import { Sidebar } from '../components/Sidebar';
-import { SIDEBAR_ITEMS } from '../constants/sidebar';
+import { useTranslation } from 'react-i18next';
+import { getSidebarItems } from '../constants/sidebar';
 
 export const Layout = () => {
+  const { t } = useTranslation('common');
+  const SIDEBAR_ITEMS = getSidebarItems(t);
+
   return (
     <div className='flex flex-col min-h-screen'>
       <Header />

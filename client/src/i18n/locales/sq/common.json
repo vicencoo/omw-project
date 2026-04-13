@@ -28,5 +28,23 @@
     "contactText3": "legal@atoil.al",
     "contactText4": "24/7 Hapur",
     "footerRights": "© OMW. Të gjitha të drejtat e rezervuara."
+  },
+  "prices": {
+    "header_live": "Live tani",
+    "header_country": "Shqipëri",
+    "header_oil": "karburant",
+
+    "header_text_1": "Çmimet",
+    "header_text_2": "e karburantit",
+    "header_text_3": "sot",
+
+    "updated_at": "Përditësuar më"
+  },
+  "sidebar": {
+    "manage_prices": "Menaxho Çmimet"
+  },
+  "manage_prices": {
+    "title": "Menaxho Çmimet",
+    "description": "Përditëso çmimet e karburantit për çdo stacion"
   }
 }

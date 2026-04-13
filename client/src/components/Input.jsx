@@ -1,6 +1,15 @@
 import { Text } from './Text';
 
-export const Input = ({ label, placeholder, multiline = false, className }) => {
+export const Input = ({
+  label,
+  value,
+  placeholder,
+  multiline = false,
+  onChange,
+  type = 'text',
+  name,
+  className,
+}) => {
   return (
     <div className='flex flex-col gap-1 w-full'>
       {label && (
@@ -14,6 +23,8 @@ export const Input = ({ label, placeholder, multiline = false, className }) => {
       {multiline ? (
         <textarea
           rows={6}
+          value={value}
+          onChange={onChange}
           className={`
     bg-white border-[1.5px] rounded-md border-gray-300 text-gray-800
     px-4 py-3 text-sm outline-none transition-all duration-200
@@ -24,6 +35,10 @@ export const Input = ({ label, placeholder, multiline = false, className }) => {
         />
       ) : (
         <input
+          name={name}
+          type={type}
+          value={value}
+          onChange={onChange}
           className={`
     bg-white border-[1.5px] rounded-md border-gray-300 text-gray-800
     px-4 py-3 text-sm outline-none transition-all duration-200

@@ -18,7 +18,7 @@ export const Home = () => {
     <div className='flex flex-col gap-20 py-20'>
       <Reveal>
         <section className='container'>
-          <div className='grid md:grid-cols-2 gap-10'>
+          <div className='grid lg:grid-cols-2 gap-10'>
             <div className='flex flex-col gap-7 md:border-b-2 md:border-green-200 md:pb-10'>
               <div className='flex items-center gap-2'>
                 <span className='flex w-9 h-[0.5px] bg-green-600' />
@@ -87,11 +87,11 @@ export const Home = () => {
       </Reveal>
 
       <Reveal>
-        <section className='flex flex-col md:flex-row w-full md:py-14 py-8 md:px-0 px-10 bg-linear-to-r from-green-800 to-green-950 justify-center'>
+        <section className='flex flex-col lg:flex-row w-full md:py-14 py-8 md:px-0 px-10 bg-linear-to-r from-green-800 to-green-950 justify-center'>
           {homeStats.map((stat, index) => (
             <Reveal
               key={stat.id}
-              className={`md:border-r md:border-b-0 border-b md:py-0 py-8  border-green-700 w-full ${
+              className={`lg:border-r lg:border-b-0 border-b lg:py-0 py-8  border-green-700 w-full ${
                 index === homeStats.length - 1 ? 'border-r-0 border-b-0' : ''
               }`}
             >

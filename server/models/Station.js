@@ -1,38 +1,32 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../config/database');
-const Station = require('./Station');
 
-const Price = sequelize.define(
-  'Price',
+const Station = sequelize.define(
+  'Station',
   {
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },
-    fuel: {
+    city: {
       type: Sequelize.STRING,
       allowNull: false,
     },
-    price: {
+    area: {
       type: Sequelize.STRING,
       allowNull: false,
     },
-    station_id: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: Station,
-        key: 'id',
-      },
-      onDelete: 'CASCADE',
+    last_price_update: {
+      type: Sequelize.DATE,
+      allowNull: true,
     },
   },
   {
-    tableName: 'station_prices',
+    tableName: 'stations',
     underscored: true,
     timestamps: true,
   },
 );
 
-module.exports = Price;
+module.exports = Station;

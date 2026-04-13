@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 
-export const OmwLogo = () => {
+export const OmwLogo = ({ className }) => {
   const navigate = useNavigate();
   return (
     <div
-      className='px-4 py-2 bg-[#2f971f] rounded-2xl text-white cursor-pointer hover:scale-105 transition-all duration-300 will-change-transform'
+      className={`px-4 py-2 bg-[#2f971f] rounded-2xl text-white cursor-pointer hover:scale-105 transition-all duration-300 will-change-transform ${className}`}
       onClick={() => navigate('/')}
     >
       <span

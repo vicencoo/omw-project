@@ -28,5 +28,23 @@
     "contactText3": "legal@atoil.al",
     "contactText4": "Open 24/7",
     "footerRights": "© OMW. All rights reserved."
+  },
+  "prices": {
+    "header_live": "Live now",
+    "header_country": "Albania",
+    "header_oil": "fuel",
+
+    "header_text_1": "Fuel",
+    "header_text_2": "prices",
+    "header_text_3": "today",
+
+    "updated_at": "Updated on"
+  },
+  "sidebar": {
+    "manage_prices": "Manage Prices"
+  },
+  "manage_prices": {
+    "title": "Manage Prices",
+    "description": "Update fuel prices for each station"
   }
 }
