@@ -3,6 +3,9 @@ import { useManagePrices } from './useManagePrices';
 import { useTranslation } from 'react-i18next';
 import { ManagePricesSkeleton } from './ManagePricesSkeleton';
 
+// import { Input } from '../../components/Input';
+// import { Button } from '../../components/Button';
+
 const fuelStyles = {
   'euro diesel': {
     text: 'text-blue-600',
@@ -55,6 +58,10 @@ export const ManagePrices = () => {
     cancelEdit,
     disableButton,
     loading,
+    // changeStationPrice,
+    // changeValue,
+    // station,
+    // submitStation,
   } = useManagePrices();
   const { t } = useTranslation('common');
 
@@ -73,6 +80,36 @@ export const ManagePrices = () => {
           {t('manage_prices.description')}
         </p>
       </div>
+
+      {/* <div className='flex flex-col gap-3'>
+        <Input
+          value={station.city}
+          placeholder={'City'}
+          onChange={(e) => changeValue('city', e.target.value)}
+        />
+        <Input
+          value={station.area}
+          placeholder={'Area'}
+          onChange={(e) => changeValue('area', e.target.value)}
+        />
+        <div className='grid grid-cols-2 gap-4'>
+          {station.station_prices.map((sp, i) => (
+            <div key={i} className='flex items-center gap-2 mb-2'>
+              <Input
+                value={sp.fuel}
+                placeholder={'Fuel'}
+                onChange={(e) => changeStationPrice(i, 'fuel', e.target.value)}
+              />
+              <Input
+                value={sp.price}
+                placeholder={'Price'}
+                onChange={(e) => changeStationPrice(i, 'price', e.target.value)}
+              />
+            </div>
+          ))}
+        </div>
+        <Button name={'submit station'} onClick={submitStation} />
+      </div> */}
 
       <div className='grid md:grid-cols-3 gap-5'>
         {loading ? (

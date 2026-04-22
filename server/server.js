@@ -15,6 +15,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
+// const allowedOrigins = process.env.ALLOWED_LOCAL;
 
 app.use(
   cors({

@@ -3,17 +3,12 @@ import { Text } from '../../components/Text';
 import { formatDateTime } from '../../utils/formatDateTime';
 import { Reveal } from '../../components/Reveal';
 
-// const fuelColors = {
-//   'euro diesel': '#c17d2e',
-//   'crystal diesel': '#378ADD',
-//   petrol: '#D85A30',
-//   lpg: '#1D9E75',
-// };
-
 const fuelColors = {
   'euro diesel': '#1218c3',
   'crystal diesel': '#e26600',
-  petrol: '#16bc10',
+  // petrol: '#16bc10',
+  'benzinë 95 oktan': '#16bc10',
+  'benzinë 100 oktan': '#00e676',
   lpg: '#fa1111',
 };
 
@@ -72,48 +67,51 @@ export const StationPriceCard = ({ s, i }) => {
 
         {/* Prices */}
         <div className='w-full md:w-auto flex flex-wrap md:flex-nowrap items-stretch'>
-          {s.station_prices.map((price) => (
-            <div
-              key={price.id}
-              className='
+          {/* {s.station_prices.map((price) => ( */}
+          {s.station_prices
+            .filter((price) => Number(price.price) > 0)
+            .map((price) => (
+              <div
+                key={price.id}
+                className='
               w-1/2 md:w-auto
               flex flex-col md:items-end items-start justify-between
               border-t md:border-t-0 md:border-l border-r-0 md:border-r last:border-r-0 border-slate-100
               gap-2
             '
-              style={{
-                padding:
-                  window.innerWidth < 768 ? '1rem 0.75rem' : '1.75rem 1.5rem',
-              }}
-            >
-              <span
-                className='text-slate-400 tracking-[.18em] uppercase whitespace-nowrap'
-                style={{ fontFamily: "'DM Mono', monospace", fontSize: 10 }}
-              >
-                {price.fuel}
-              </span>
-
-              <Text
-                text={price.price}
-                size='text-[clamp(1.4rem,6vw,3rem)] md:text-[clamp(2rem,3.5vw,3rem)]'
-                font='font-bold font-serif'
-                className='italic leading-none text-slate-950'
-              />
-
-              <Text
-                text='all / l'
-                size='text-[9px]'
-                className='uppercase tracking-[.16em]'
-              />
-
-              <div
-                className='w-full h-0.75 mt-1'
                 style={{
-                  background: fuelColors[price.fuel],
+                  padding:
+                    window.innerWidth < 768 ? '1rem 0.75rem' : '1.75rem 1.5rem',
                 }}
-              />
-            </div>
-          ))}
+              >
+                <span
+                  className='text-slate-400 tracking-[.18em] uppercase whitespace-nowrap'
+                  style={{ fontFamily: "'DM Mono', monospace", fontSize: 10 }}
+                >
+                  {price.fuel}
+                </span>
+
+                <Text
+                  text={price.price}
+                  size='text-[clamp(1.4rem,6vw,3rem)] md:text-[clamp(2rem,3.5vw,3rem)]'
+                  font='font-bold font-serif'
+                  className='italic leading-none text-slate-950'
+                />
+
+                <Text
+                  text='all / l'
+                  size='text-[9px]'
+                  className='uppercase tracking-[.16em]'
+                />
+
+                <div
+                  className='w-full h-0.75 mt-1'
+                  style={{
+                    background: fuelColors[price.fuel],
+                  }}
+                />
+              </div>
+            ))}
         </div>
       </div>
     </Reveal>
