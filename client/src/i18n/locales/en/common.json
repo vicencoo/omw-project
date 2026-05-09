@@ -17,7 +17,8 @@
     "item3": "Our Locations",
     "item4": "Products",
     "item5": "Services",
-    "item6": "Contact Us"
+    "item6": "Contact Us",
+    "footerRights": "© OMW. All rights reserved."
   },
   "contact": {
     "contactLabel1": "Head Office",
