@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
-import { axios } from '../../api/axios';
+import { useEffect, useState } from "react";
+import { axios } from "../../api/axios";
 
 // const Location = {
-//   city: '',
-//   area: '',
+//   city: "",
+//   area: "",
 //   station_prices: [
-//     { fuel: '', price: 0 },
-//     { fuel: '', price: 0 },
-//     { fuel: '', price: 0 },
-//     { fuel: '', price: 0 },
-//     { fuel: '', price: 0 },
+//     { fuel: "", price: 0 },
+//     { fuel: "", price: 0 },
+//     { fuel: "", price: 0 },
+//     { fuel: "", price: 0 },
+//     { fuel: "", price: 0 },
 //   ],
 // };
 
@@ -18,12 +18,12 @@ export const useManagePrices = () => {
   const [editing, setEditing] = useState(null);
   const [disableButton, setDisableButton] = useState(false);
   const [loading, setLoading] = useState(true);
-
+  //
   // const [station, setStation] = useState(Location);
 
   const getPrices = async () => {
     try {
-      const res = await axios('/get-stations');
+      const res = await axios("/get-stations");
       if (res.data) {
         setStations(res.data);
       }
@@ -44,7 +44,7 @@ export const useManagePrices = () => {
     setEditing({
       stationId,
       priceId,
-      value: String(currentPrice ?? ''),
+      value: String(currentPrice ?? ""),
     });
   };
 
@@ -110,7 +110,9 @@ export const useManagePrices = () => {
 
   // const submitStation = async () => {
   //   try {
-  //     const res = await axios.post('/add-station', station);
+  //     console.log("Data sending:", station);
+
+  //     const res = await axios.post("/add-station", station);
   //     if (res.data) {
   //       setStation(Location);
   //       // await getStations();
