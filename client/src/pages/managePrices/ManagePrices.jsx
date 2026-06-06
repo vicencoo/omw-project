@@ -3,8 +3,8 @@ import { useManagePrices } from "./useManagePrices";
 import { useTranslation } from "react-i18next";
 import { ManagePricesSkeleton } from "./ManagePricesSkeleton";
 
-// import { Input } from '../../components/Input';
-// import { Button } from '../../components/Button';
+// import { Input } from "../../components/Input";
+// import { Button } from "../../components/Button";
 
 const fuelStyles = {
   "euro diesel": {

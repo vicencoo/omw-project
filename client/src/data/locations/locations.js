@@ -49,6 +49,14 @@ export const locations = [
   },
   {
     id: 7,
+    name: "OMW Pogradec",
+    address: "Pogradec , në hyrje të Pogradecit",
+    phone: "+355 68 208 0481",
+    lat: 40.91753544530626,
+    lng: 20.64232540004835,
+  },
+  {
+    id: 8,
     name: "OMW Përmet",
     address: "Përmet , në dalje të Përmetit",
     phone: "+355 68 200 0042",
@@ -56,7 +64,7 @@ export const locations = [
     lng: 20.354910853280064,
   },
   {
-    id: 8,
+    id: 9,
     name: "OMW Korcë",
     address: "Përmet , Rruga Muzakajt",
     phone: "+355 68 200 0042",
