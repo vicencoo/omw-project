@@ -7,7 +7,7 @@ import { ManagePricesSkeleton } from "./ManagePricesSkeleton";
 // import { Button } from "../../components/Button";
 
 const fuelStyles = {
-  "euro diesel": {
+  "diesel 10ppm": {
     text: "text-blue-600",
     border: "border-blue-200",
     bg: "bg-blue-50",
@@ -31,7 +31,7 @@ const fuelStyles = {
     bg: "bg-orange-50",
     dot: "bg-orange-500",
   },
-  lpg: {
+  autogaz: {
     text: "text-red-600",
     border: "border-red-200",
     bg: "bg-red-50",

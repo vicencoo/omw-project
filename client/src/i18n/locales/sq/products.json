@@ -20,7 +20,7 @@
       },
       "diesel": {
         "cat": "diesel",
-        "name": "euro diesel"
+        "name": "diesel 10ppm"
       },
       "petrol": {
         "cat": "benzinë",
@@ -28,7 +28,7 @@
       },
       "lpg": {
         "cat": "gaz",
-        "name": "LPG"
+        "name": "Autogaz"
       }
     }
   },
@@ -49,7 +49,7 @@
         }
       },
       "diesel": {
-        "name": "Euro Diesel",
+        "name": "Diesel 10ppm",
         "description": "Diesel në përputhje me standardet Euro 6. Ideal për flota moderne dhe transport afatgjatë me efiçiencë të lartë dhe kosto operative të reduktuara.",
         "badge": "Euro 6",
         "specs": {
@@ -69,7 +69,7 @@
         }
       },
       "lpg": {
-        "name": "LPG",
+        "name": "Autogaz",
         "description": "Gaz i lëngshëm i naftës për automjete të konvertuara. Deri në 50% kosto më të ulëta se benzina, me emision të reduktuar dhe autonomi të zgjeruar.",
         "badge": "Emision i Ulët",
         "specs": {

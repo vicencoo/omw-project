@@ -66,7 +66,7 @@ export const locations = [
   {
     id: 9,
     name: "OMW Korcë",
-    address: "Përmet , Rruga Muzakajt",
+    address: "Korcë , Rruga Muzakajt",
     phone: "+355 68 200 0042",
     lat: 40.63241184121122,
     lng: 20.76552855800505,

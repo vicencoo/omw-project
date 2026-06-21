@@ -20,7 +20,7 @@
       },
       "diesel": {
         "cat": "diesel",
-        "name": "euro diesel"
+        "name": "diesel 10ppm"
       },
       "petrol": {
         "cat": "petrol",
@@ -28,7 +28,7 @@
       },
       "lpg": {
         "cat": "gas",
-        "name": "LPG"
+        "name": "Autogaz"
       }
     }
   },
@@ -48,7 +48,7 @@
         }
       },
       "diesel": {
-        "name": "Euro Diesel",
+        "name": "Diesel 10ppm",
         "description": "Diesel compliant with Euro 6 standards. Ideal for modern fleets and long-distance transport with high efficiency and reduced operating costs.",
         "badge": "Euro 6",
         "specs": {
@@ -68,7 +68,7 @@
         }
       },
       "lpg": {
-        "name": "LPG",
+        "name": "Autogaz",
         "description": "Liquefied petroleum gas for converted vehicles. Up to 50% lower costs than petrol, with reduced emissions and extended range.",
         "badge": "Low Emission",
         "specs": {

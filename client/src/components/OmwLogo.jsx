@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 // export const OmwLogo = ({ className }) => {
 //   const navigate = useNavigate();
@@ -27,17 +27,17 @@ export const OmwLogo = ({ className }) => {
 
   return (
     <img
-      src='/images/omw-logo.webp'
-      alt='OMW'
-      onClick={() => navigate('/')}
+      src="/images/omw-logo.webp"
+      alt="OMW"
+      onClick={() => navigate("/")}
       className={`
         h-9 w-auto object-contain cursor-pointer select-none
         hover:scale-[1.02] transition-all duration-300 will-change-transform
-        ${className || ''}
+        ${className || ""}
       `}
       style={{
         filter:
-          'brightness(0) saturate(100%) invert(18%) sepia(60%) saturate(600%) hue-rotate(100deg) brightness(0.8)',
+          "brightness(0) saturate(100%) invert(57%) sepia(61%) saturate(515%) hue-rotate(61deg) brightness(94%) contrast(88%)",
       }}
       draggable={false}
     />
