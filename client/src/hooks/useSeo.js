@@ -40,9 +40,16 @@ const setJsonLd = (data) => {
   });
 };
 
-// Updates <head> only (title, description, canonical, Open Graph, JSON-LD).
+// Updates <head> only (title, description, keywords, canonical, Open Graph, JSON-LD).
 // Renders nothing, so pages keep their markup and design unchanged.
-export const useSeo = ({ title, description, path = '/', jsonLd, noindex }) => {
+export const useSeo = ({
+  title,
+  description,
+  keywords,
+  path = '/',
+  jsonLd,
+  noindex,
+}) => {
   const { i18n } = useTranslation();
   const lang = i18n.language === 'en' ? 'en' : 'sq';
   const jsonLdString = jsonLd ? JSON.stringify(jsonLd) : '';
@@ -59,6 +66,7 @@ export const useSeo = ({ title, description, path = '/', jsonLd, noindex }) => {
       setMeta('property', 'og:description', description);
       setMeta('name', 'twitter:description', description);
     }
+    if (keywords) setMeta('name', 'keywords', keywords);
     if (title) {
       setMeta('property', 'og:title', title);
       setMeta('name', 'twitter:title', title);
@@ -72,18 +80,22 @@ export const useSeo = ({ title, description, path = '/', jsonLd, noindex }) => {
     setMeta('name', 'twitter:image', DEFAULT_IMAGE);
     setCanonical(url);
     setJsonLd(jsonLdString ? JSON.parse(jsonLdString) : null);
-  }, [title, description, path, jsonLdString, noindex, lang]);
+  }, [title, description, keywords, path, jsonLdString, noindex, lang]);
 };
 
-// Static pages: title/description come from common.json -> seo.<page>
+// Static pages: title/description/keywords come from common.json -> seo.<page>
 export const usePageSeo = (page, path, options = {}) => {
   const { t, i18n } = useTranslation('common');
   const descKey = `seo.${page}.description`;
+  const keywordsKey = `seo.${page}.keywords`;
 
   useSeo({
     title: t(`seo.${page}.title`),
     description: i18n.exists(descKey, { ns: 'common' })
       ? t(descKey)
+      : undefined,
+    keywords: i18n.exists(keywordsKey, { ns: 'common' })
+      ? t(keywordsKey)
       : undefined,
     path,
     ...options,

@@ -5,12 +5,13 @@ import { fuels } from '../../constants/pricesFuels';
 import { usePrices } from './usePrices';
 import { StationPriceCardSkeleton } from './StationPriceCardSkeleton';
 import { useSeo } from '../../hooks/useSeo';
-import { getPricesSeo } from './pricesSeo';
+import { getPricesFaq, getPricesSeo } from './pricesSeo';
 
 export const Prices = () => {
   const { t, i18n } = useTranslation('common');
   const { stations, loading } = usePrices();
   useSeo(getPricesSeo(stations, t, i18n.language));
+  const faq = getPricesFaq(stations, t, i18n.language);
 
   const [now] = useState(new Date());
   const dateStr = now.toLocaleDateString('sq-AL', {
@@ -90,6 +91,10 @@ export const Prices = () => {
           <span style={{ color: '#c17d2e' }}>.</span>
         </h1>
 
+        <p className='text-slate-500 max-w-2xl mb-6 md:text-base text-sm'>
+          {t('prices.intro')}
+        </p>
+
         {/*  */}
         {/* <div className='flex flex-col gap-3'>
           <Input
@@ -166,6 +171,37 @@ export const Prices = () => {
               <StationPriceCard s={s} i={i} key={s.id} />
             ))}
       </div>
+
+      {/* FAQ – live answers for "çmimi i naftës sot" style searches */}
+      {faq.length > 0 && (
+        <section className='md:mt-20 mt-14'>
+          <h2
+            className='mb-6'
+            style={{
+              fontFamily: "'Syne Mono', monospace",
+              fontSize: 11,
+              letterSpacing: '.22em',
+              textTransform: 'uppercase',
+              color: '#c17d2e',
+            }}
+          >
+            {t('prices.faq_title')}
+          </h2>
+          <div className='grid md:grid-cols-2 gap-x-10'>
+            {faq.map(({ question, answer }) => (
+              <div
+                key={question}
+                className='border-t border-slate-100 md:py-6 py-4'
+              >
+                <h3 className='text-slate-950 font-bold md:text-xl text-lg mb-2'>
+                  {question}
+                </h3>
+                <p className='text-slate-500 md:text-base text-sm'>{answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 };

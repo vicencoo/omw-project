@@ -20,6 +20,24 @@ const lowestPrices = (stations) => {
   return result;
 };
 
+// Fuel names from the API grouped the way people search ("çmimi i naftës")
+const FUEL_GROUPS = [
+  ['diesel', /diesel|naft/i],
+  ['petrol', /benzin|petrol/i],
+  ['lpg', /gaz|lpg|gpl/i],
+];
+
+// Lowest price per group, e.g. [['diesel', 219], ['petrol', 225]]
+const lowestByGroup = (stations) => {
+  const prices = Object.entries(lowestPrices(stations));
+  return FUEL_GROUPS.map(([group, pattern]) => {
+    const matches = prices
+      .filter(([fuel]) => pattern.test(fuel))
+      .map(([, price]) => price);
+    return [group, matches.length ? Math.min(...matches) : null];
+  }).filter(([, price]) => price !== null);
+};
+
 const latestUpdate = (stations) =>
   stations
     .map((s) => s.last_price_update)
@@ -27,11 +45,35 @@ const latestUpdate = (stations) =>
     .sort()
     .pop();
 
+const formatDate = (value, lang) =>
+  new Date(value || Date.now()).toLocaleDateString(
+    lang === 'en' ? 'en-GB' : 'sq-AL',
+    { day: 'numeric', month: 'long', year: 'numeric' },
+  );
+
+// Q&A shown on the page and in FAQPage JSON-LD; answers use live prices
+export const getPricesFaq = (stations, t, lang) => {
+  if (!stations?.length) return [];
+  const date = formatDate(latestUpdate(stations), lang);
+
+  return [
+    ...lowestByGroup(stations).map(([group, price]) => ({
+      question: t(`prices.faq.${group}_q`),
+      answer: t(`prices.faq.${group}_a`, { date, price }),
+    })),
+    {
+      question: t('prices.faq.updates_q'),
+      answer: t('prices.faq.updates_a', { date }),
+    },
+  ];
+};
+
 export const getPricesSeo = (stations, t, lang) => {
   if (!stations?.length) {
     return {
       title: t('seo.prices.title'),
       description: t('seo.prices.description'),
+      keywords: t('seo.prices.keywords'),
       path: '/prices',
       jsonLd: {
         '@graph': [
@@ -50,23 +92,31 @@ export const getPricesSeo = (stations, t, lang) => {
   }
 
   const cities = [...new Set(stations.map((s) => capitalize(s.city)))];
-  const summary = Object.entries(lowestPrices(stations))
-    .map(
-      ([fuel, price]) =>
-        `${capitalize(fuel)} ${t('seo.prices.from')} ${price} ALL/L`,
+  const summary = lowestByGroup(stations)
+    .map(([group, price]) =>
+      t('seo.prices.fuelFrom', {
+        fuel: t(`seo.prices.groups.${group}`),
+        price,
+      }),
     )
     .join(', ');
   const updated = latestUpdate(stations);
-  const date = new Date(updated || Date.now()).toLocaleDateString(
-    lang === 'en' ? 'en-GB' : 'sq-AL',
-    { day: 'numeric', month: 'long', year: 'numeric' },
-  );
+  const date = formatDate(updated, lang);
+  const faq = getPricesFaq(stations, t, lang);
+
+  // Base keywords plus city-specific ones, e.g. "karburant Tiranë"
+  const keywords = [
+    t('seo.prices.keywords'),
+    ...cities.map((city) => t('seo.prices.keywordsCity', { city })),
+  ].join(', ');
 
   const description = t('seo.prices.descriptionLive', {
     date,
     count: stations.length,
     cities: cities.join(', '),
-    summary: summary ? `${summary}.` : '',
+    summary: summary
+      ? `${summary.charAt(0).toUpperCase()}${summary.slice(1)}.`
+      : '',
   });
 
   const gasStations = stations.map((s) => ({
@@ -103,6 +153,7 @@ export const getPricesSeo = (stations, t, lang) => {
   return {
     title: t('seo.prices.title'),
     description,
+    keywords,
     path: '/prices',
     jsonLd: {
       '@graph': [
@@ -126,6 +177,15 @@ export const getPricesSeo = (stations, t, lang) => {
             '@type': 'ListItem',
             position: i + 1,
             item,
+          })),
+        },
+        {
+          '@type': 'FAQPage',
+          '@id': `${PRICES_URL}#faq`,
+          mainEntity: faq.map(({ question, answer }) => ({
+            '@type': 'Question',
+            name: question,
+            acceptedAnswer: { '@type': 'Answer', text: answer },
           })),
         },
       ],
