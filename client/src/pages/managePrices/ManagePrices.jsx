@@ -2,6 +2,7 @@ import { Pencil, Check, X, MapPin, Fuel } from "lucide-react";
 import { useManagePrices } from "./useManagePrices";
 import { useTranslation } from "react-i18next";
 import { ManagePricesSkeleton } from "./ManagePricesSkeleton";
+import { usePageSeo } from "../../hooks/useSeo";
 
 // import { Input } from "../../components/Input";
 // import { Button } from "../../components/Button";
@@ -54,6 +55,7 @@ const getFuelStyle = (fuel) => {
 };
 
 export const ManagePrices = () => {
+  usePageSeo("manage_prices", "/manage-prices", { noindex: true });
   const {
     stations,
     confirmEdit,

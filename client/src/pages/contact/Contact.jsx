@@ -5,8 +5,41 @@ import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { useTranslation } from 'react-i18next';
 import { useContact } from './useContact';
+import { usePageSeo } from '../../hooks/useSeo';
+import { ORGANIZATION, SITE_URL } from '../../constants/seo';
+
+const CONTACT_JSONLD = {
+  '@type': 'ContactPage',
+  url: `${SITE_URL}/contact`,
+  mainEntity: {
+    ...ORGANIZATION,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+355 4 222 1666',
+      email: 'legal@atoil.al',
+      contactType: 'customer service',
+      areaServed: 'AL',
+      availableLanguage: ['sq', 'en'],
+      hoursAvailable: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: [
+          'Monday',
+          'Tuesday',
+          'Wednesday',
+          'Thursday',
+          'Friday',
+          'Saturday',
+          'Sunday',
+        ],
+        opens: '00:00',
+        closes: '23:59',
+      },
+    },
+  },
+};
 
 export const Contact = () => {
+  usePageSeo('contact', '/contact', { jsonLd: CONTACT_JSONLD });
   const { t } = useTranslation('common', 'contact');
   const { changeInputValue, email, submit, errors, isDisabled } = useContact();
   return (

@@ -35,11 +35,9 @@
     "header_live": "Live tani",
     "header_country": "Shqipëri",
     "header_oil": "karburant",
-
     "header_text_1": "Çmimet",
     "header_text_2": "e karburantit",
     "header_text_3": "sot",
-
     "updated_at": "Përditësuar më"
   },
   "sidebar": {
@@ -48,5 +46,43 @@
   "manage_prices": {
     "title": "Menaxho Çmimet",
     "description": "Përditëso çmimet e karburantit për çdo stacion"
+  },
+  "seo": {
+    "home": {
+      "title": "OMW - On My Way | Karburant cilësor në Shqipëri",
+      "description": "OMW (On My Way) – rrjet stacionesh karburanti në Shqipëri. Naftë, benzinë dhe autogaz me cilësi të lartë, çmime të përditësuara çdo ditë dhe shërbim 24/7."
+    },
+    "about": {
+      "title": "Rreth Nesh | OMW - On My Way",
+      "description": "Njihuni me OMW (On My Way): historia, vlerat dhe angazhimi ynë për karburant cilësor dhe shërbim të besueshëm në të gjithë Shqipërinë."
+    },
+    "prices": {
+      "title": "Çmimet e Karburantit Sot në Shqipëri – Nafta, Benzina, Gazi | OMW",
+      "description": "Çmimet e karburantit sot në stacionet OMW në Shqipëri: naftë, benzinë dhe autogaz (lekë/litër), të përditësuara çdo ditë për çdo stacion.",
+      "descriptionLive": "Çmimet e karburantit sot ({{date}}) në {{count}} stacione OMW: {{cities}}. {{summary}} Çmime në lekë/litër, të përditësuara për çdo stacion.",
+      "from": "nga"
+    },
+    "locations": {
+      "title": "Stacionet OMW – Lokacionet në Shqipëri | OMW",
+      "description": "Gjeni stacionin më të afërt OMW në Shqipëri: Tiranë, Vorë, Orikum, Pogradec, Përmet, Korçë e më shumë. Adresa, telefon dhe udhëzime në hartë."
+    },
+    "products": {
+      "title": "Produktet – Naftë, Benzinë dhe Autogaz | OMW",
+      "description": "Produktet e karburantit OMW: Diesel 10ppm, Crystal Diesel, Benzinë 95 dhe 100 oktan dhe Autogaz – cilësi e lartë për çdo automjet."
+    },
+    "services": {
+      "title": "Shërbimet | OMW - On My Way",
+      "description": "Shërbimet në stacionet OMW në Shqipëri – karburant cilësor, shërbim i shpejtë dhe komoditet gjatë çdo udhëtimi."
+    },
+    "contact": {
+      "title": "Kontakt | OMW - On My Way",
+      "description": "Kontaktoni OMW (On My Way): zyra qendrore Sky Tower, Tiranë. Telefon +355 4 222 1666, email legal@atoil.al. Jemi në dispozicion 24/7."
+    },
+    "login": {
+      "title": "Hyrje | OMW"
+    },
+    "manage_prices": {
+      "title": "Menaxho Çmimet | OMW"
+    }
   }
 }

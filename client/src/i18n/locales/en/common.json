@@ -35,11 +35,9 @@
     "header_live": "Live now",
     "header_country": "Albania",
     "header_oil": "fuel",
-
     "header_text_1": "Fuel",
     "header_text_2": "prices",
     "header_text_3": "today",
-
     "updated_at": "Updated on"
   },
   "sidebar": {
@@ -48,5 +46,43 @@
   "manage_prices": {
     "title": "Manage Prices",
     "description": "Update fuel prices for each station"
+  },
+  "seo": {
+    "home": {
+      "title": "OMW - On My Way | Quality Fuel in Albania",
+      "description": "OMW (On My Way) – a fuel station network in Albania. High-quality diesel, petrol and LPG, fuel prices updated daily and 24/7 service."
+    },
+    "about": {
+      "title": "About Us | OMW - On My Way",
+      "description": "Get to know OMW (On My Way): our story, our values and our commitment to quality fuel and reliable service across Albania."
+    },
+    "prices": {
+      "title": "Fuel Prices Today in Albania – Diesel, Petrol, LPG | OMW",
+      "description": "Fuel prices today at OMW stations in Albania: diesel, petrol and LPG (ALL/litre), updated daily for every station.",
+      "descriptionLive": "Fuel prices today ({{date}}) at {{count}} OMW stations: {{cities}}. {{summary}} Prices in ALL/litre, updated for every station.",
+      "from": "from"
+    },
+    "locations": {
+      "title": "OMW Stations – Locations in Albania | OMW",
+      "description": "Find the nearest OMW station in Albania: Tirana, Vorë, Orikum, Pogradec, Përmet, Korçë and more. Address, phone and map directions."
+    },
+    "products": {
+      "title": "Products – Diesel, Petrol and LPG | OMW",
+      "description": "OMW fuel products: Diesel 10ppm, Crystal Diesel, 95 and 100 octane petrol and LPG (autogas) – high quality for every vehicle."
+    },
+    "services": {
+      "title": "Services | OMW - On My Way",
+      "description": "Services at OMW stations in Albania – quality fuel, fast service and comfort on every journey."
+    },
+    "contact": {
+      "title": "Contact | OMW - On My Way",
+      "description": "Contact OMW (On My Way): head office at Sky Tower, Tirana. Phone +355 4 222 1666, email legal@atoil.al. Available 24/7."
+    },
+    "login": {
+      "title": "Login | OMW"
+    },
+    "manage_prices": {
+      "title": "Manage Prices | OMW"
+    }
   }
 }

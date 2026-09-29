@@ -4,8 +4,13 @@ import { useLocations } from './useLocations';
 import './locationStyles.css';
 import { useTranslation } from 'react-i18next';
 import { Text } from '../../components/Text';
+import { usePageSeo } from '../../hooks/useSeo';
+import { getLocationsJsonLd } from './locationsSeo';
 
 export const Locations = () => {
+  usePageSeo('locations', '/locations', {
+    jsonLd: getLocationsJsonLd(locations),
+  });
   const { activeId, setActiveId, mapRef } = useLocations(locations);
   const activeLoc = locations.find((l) => l.id === activeId);
   const { t } = useTranslation('locations');

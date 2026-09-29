@@ -6,8 +6,10 @@ import { ValuesSection } from './ValuesSection';
 import { StorySection } from './StorySection';
 import { StatsSection } from './StatsSection';
 import { ServicesSection } from '../../components/ServicesSection';
+import { usePageSeo } from '../../hooks/useSeo';
 
 export const AboutUs = () => {
+  usePageSeo('about', '/about');
   const { t } = useTranslation('about');
   return (
     <div className='flex flex-col'>

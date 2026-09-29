@@ -9,7 +9,8 @@
   color: white !important;
 }
 .leaflet-control-attribution {
-  display: none !important;
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.7) !important;
 }
 
 .omw-sidebar::-webkit-scrollbar {

@@ -1,7 +1,9 @@
 import { Lock, Eye, EyeOff, Fuel, ShieldCheck, User } from "lucide-react";
 import { useLogin } from "./useLogin";
+import { usePageSeo } from "../../hooks/useSeo";
 
 export const Login = () => {
+  usePageSeo("login", "/omw-admin-access", { noindex: true });
   const {
     changeValue,
     user,

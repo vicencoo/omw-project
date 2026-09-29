@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /omw-admin-access
+Disallow: /manage-prices
+
+Sitemap: https://www.omw.al/sitemap.xml

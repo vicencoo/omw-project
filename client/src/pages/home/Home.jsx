@@ -9,8 +9,25 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getHeroFeatures } from "../../data/home/heroFeatures";
 import { ServicesSection } from "../../components/ServicesSection";
+import { usePageSeo } from "../../hooks/useSeo";
+import { ORGANIZATION, SITE_NAME, SITE_URL } from "../../constants/seo";
+
+const HOME_JSONLD = {
+  "@graph": [
+    ORGANIZATION,
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: SITE_NAME,
+      inLanguage: ["sq", "en"],
+      publisher: { "@id": ORGANIZATION["@id"] },
+    },
+  ],
+};
 
 export const Home = () => {
+  usePageSeo("home", "/", { jsonLd: HOME_JSONLD });
   const { t } = useTranslation("home");
   const navigate = useNavigate();
   const HERO_FEATURES = getHeroFeatures(t);

@@ -5,8 +5,10 @@ import { Text } from '../../components/Text';
 import { Reveal } from '../../components/Reveal';
 import { useTranslation } from 'react-i18next';
 import { HeroSection } from './HeroSection';
+import { usePageSeo } from '../../hooks/useSeo';
 
 export const Products = () => {
+  usePageSeo('products', '/products');
   const navigate = useNavigate();
   const { t } = useTranslation('products');
   return (

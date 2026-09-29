@@ -6,8 +6,10 @@ import { Reveal } from '../../components/Reveal';
 import { services, steps, trusts } from '../../data/services';
 import { Text } from '../../components/Text';
 import { useTranslation } from 'react-i18next';
+import { usePageSeo } from '../../hooks/useSeo';
 
 export const Services = () => {
+  usePageSeo('services', '/services');
   const navigate = useNavigate();
   const { t } = useTranslation('services');
   return (

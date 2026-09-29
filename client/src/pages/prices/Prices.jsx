@@ -4,10 +4,13 @@ import { useTranslation } from 'react-i18next';
 import { fuels } from '../../constants/pricesFuels';
 import { usePrices } from './usePrices';
 import { StationPriceCardSkeleton } from './StationPriceCardSkeleton';
+import { useSeo } from '../../hooks/useSeo';
+import { getPricesSeo } from './pricesSeo';
 
 export const Prices = () => {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const { stations, loading } = usePrices();
+  useSeo(getPricesSeo(stations, t, i18n.language));
 
   const [now] = useState(new Date());
   const dateStr = now.toLocaleDateString('sq-AL', {
