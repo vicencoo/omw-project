@@ -2,6 +2,7 @@ import { Button } from "../../components/Button";
 import { Text } from "../../components/Text";
 import { Reveal } from "../../components/Reveal";
 import { LocationsBanner } from "./LocationsBanner";
+import { CountUp } from "../../components/CountUp";
 import { homeStats } from "../../data/home/statistics";
 import { FuelSlider } from "./FuelSlider";
 import { MoveRight } from "lucide-react";
@@ -126,11 +127,12 @@ export const Home = () => {
             >
               <div className="flex flex-col gap-1 px-22 items-center">
                 <Text
-                  text={stat.label}
                   size="text-4xl"
                   font="font-semibold font-serif"
                   className="text-green-100"
-                />
+                >
+                  <CountUp value={stat.label} />
+                </Text>
                 <Text
                   text={t(stat.text)}
                   size="text-xs"

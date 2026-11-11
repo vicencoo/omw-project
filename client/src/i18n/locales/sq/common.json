@@ -18,7 +18,9 @@
     "item4": "Produktet",
     "item5": "Shërbimet",
     "item6": "Na Kontaktoni",
-    "footerRights": "© OMW. Të gjitha të drejtat e rezervuara."
+    "footerRights": "© OMW. Të gjitha të drejtat e rezervuara.",
+    "privacy": "Politika e Privatësisë",
+    "terms": "Kushtet e Shërbimit"
   },
   "contact": {
     "contactLabel1": "zyra qendrore",
@@ -108,6 +110,16 @@
     },
     "manage_prices": {
       "title": "Menaxho Çmimet | OMW"
+    },
+    "privacy": {
+      "title": "Politika e Privatësisë | OMW - On My Way",
+      "description": "Mësoni si OMW (On My Way) i mbledh, i përdor dhe i mbron të dhënat tuaja personale kur vizitoni omw.al ose na kontaktoni.",
+      "keywords": "OMW politika e privatësisë, të dhënat personale OMW, mbrojtja e të dhënave Shqipëri, cookies OMW"
+    },
+    "terms": {
+      "title": "Kushtet e Shërbimit | OMW - On My Way",
+      "description": "Kushtet dhe rregullat për përdorimin e faqes së OMW (On My Way), përfshirë informacionin mbi çmimet e karburantit dhe përdorimin e lejuar.",
+      "keywords": "OMW kushtet e shërbimit, OMW kushtet e përdorimit, omw.al kushtet"
     }
   }
 }

@@ -5,6 +5,7 @@ import { ServiceCard } from './ServiceCard';
 import { Reveal } from '../../components/Reveal';
 import { services, steps, trusts } from '../../data/services';
 import { Text } from '../../components/Text';
+import { CountUp } from '../../components/CountUp';
 import { useTranslation } from 'react-i18next';
 import { usePageSeo } from '../../hooks/useSeo';
 
@@ -185,11 +186,12 @@ export const Services = () => {
               <Reveal key={i}>
                 <div className='md:py-12 py-6 px-6 md:border-r border-r-0 border-amber-500 last:border-r-0 border-b md:border-b-0 flex flex-col gap-1'>
                   <Text
-                    text={trust.value}
                     size='text-4xl md:text-5xl'
                     font='font-serif font-bold'
                     className='text-stone-950 '
-                  />
+                  >
+                    <CountUp value={trust.value} />
+                  </Text>
                   <Text
                     text={t(`trusts.${trust.label}`)}
                     size='text-xs'

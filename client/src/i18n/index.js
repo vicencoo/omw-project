@@ -15,6 +15,8 @@ import sqServices from './locales/sq/services.json';
 import enServices from './locales/en/services.json';
 import sqLocations from './locales/sq/locations.json';
 import enLocations from './locales/en/locations.json';
+import sqLegal from './locales/sq/legal.json';
+import enLegal from './locales/en/legal.json';
 
 const savedLanguage = localStorage.getItem('language') || 'sq';
 
@@ -28,6 +30,7 @@ i18n.use(initReactI18next).init({
       products: sqProducts,
       services: sqServices,
       locations: sqLocations,
+      legal: sqLegal,
     },
     en: {
       home: enHome,
@@ -37,6 +40,7 @@ i18n.use(initReactI18next).init({
       products: enProducts,
       services: enServices,
       locations: enLocations,
+      legal: enLegal,
     },
   },
   lng: savedLanguage,
@@ -49,6 +53,7 @@ i18n.use(initReactI18next).init({
     'products',
     'services',
     'locations',
+    'legal',
   ],
   defaultNS: 'common',
   interpolation: {

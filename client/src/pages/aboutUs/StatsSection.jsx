@@ -1,5 +1,6 @@
 import { Reveal } from '../../components/Reveal';
 import { Text } from '../../components/Text';
+import { CountUp } from '../../components/CountUp';
 import { stats } from '../../data/aboutUs';
 
 export const StatsSection = ({ t }) => {
@@ -11,11 +12,12 @@ export const StatsSection = ({ t }) => {
             <Reveal key={i}>
               <div className='py-10 px-6 flex flex-col gap-1 items-start md:border-r border-r-0 border-amber-500 last:border-r-0 border-b md:border-b-0'>
                 <Text
-                  text={s.value}
                   size='text-4xl md:text-5xl '
                   font='font-serif font-bold'
                   className='text-green-950'
-                />
+                >
+                  <CountUp value={s.value} />
+                </Text>
                 <Text
                   text={t(s.label)}
                   size='text-sm'

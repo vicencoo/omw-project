@@ -18,7 +18,9 @@
     "item4": "Products",
     "item5": "Services",
     "item6": "Contact Us",
-    "footerRights": "© OMW. All rights reserved."
+    "footerRights": "© OMW. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
   },
   "contact": {
     "contactLabel1": "Head Office",
@@ -108,6 +110,16 @@
     },
     "manage_prices": {
       "title": "Manage Prices | OMW"
+    },
+    "privacy": {
+      "title": "Privacy Policy | OMW - On My Way",
+      "description": "Learn how OMW (On My Way) collects, uses and protects your personal data when you visit omw.al or contact us.",
+      "keywords": "OMW privacy policy, OMW personal data, data protection Albania, OMW cookies"
+    },
+    "terms": {
+      "title": "Terms of Service | OMW - On My Way",
+      "description": "The terms and conditions for using the OMW (On My Way) website, including fuel price information and acceptable use.",
+      "keywords": "OMW terms of service, OMW terms and conditions, omw.al terms"
     }
   }
 }

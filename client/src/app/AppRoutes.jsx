@@ -9,6 +9,8 @@ import { Contact } from '../pages/contact/Contact';
 import { Prices } from '../pages/prices/Prices';
 import { ManagePrices } from '../pages/managePrices/ManagePrices';
 import { Login } from '../pages/login/Login';
+import { PrivacyPolicy } from '../pages/legal/PrivacyPolicy';
+import { TermsOfService } from '../pages/legal/TermsOfService';
 import { useLayoutEffect } from 'react';
 import { setUpInterceptors } from '../api/axios';
 import { ProtectedRoute } from '../router/ProtectedRoute';
@@ -31,6 +33,8 @@ export const AppRoutes = () => {
         <Route path='/products' element={<Products />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+        <Route path='/terms-of-service' element={<TermsOfService />} />
 
         <Route element={<ProtectedRoute />}>
           <Route path='/manage-prices' element={<ManagePrices />} />
