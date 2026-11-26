@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { axios } from "../../api/axios";
 
 const STORAGE_KEY = "omw-signup";
-const SCROLL_TRIGGER = 300; // px scrolled before the modal opens
-const SHOW_EVERY_DAYS = 7; // show the modal at most once a week
+const SCROLL_TRIGGER = 300;
+const SHOW_EVERY_DAYS = 7;
 
 export const useEmailSignup = (t) => {
   const [open, setOpen] = useState(false);
