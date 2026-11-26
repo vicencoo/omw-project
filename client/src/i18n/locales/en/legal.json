@@ -1,6 +1,6 @@
 {
   "updated": "Last updated",
-  "date": "11 November 2026",
+  "date": "26 November 2026",
   "toc": "Contents",
   "cta": {
     "title": "Have a question about your data or our terms?",
@@ -27,6 +27,7 @@
         ],
         "items": [
           "Contact form data: your first name, last name, email address, subject and message.",
+          "Your email address, if you sign up for price notifications, together with the date and the page you signed up from.",
           "Anonymous usage statistics: pages visited, referring website, device type, browser and country — collected without cookies and without identifying you personally.",
           "Preferences stored on your device: the language you selected for the website."
         ]
@@ -35,6 +36,7 @@
         "title": "How we use your data",
         "items": [
           "To answer the questions, requests and offers you send us through the contact form.",
+          "To send you email notifications when fuel prices change, if you have signed up for them.",
           "To understand how the website is used and improve its content and performance.",
           "To remember your language preference between visits.",
           "To comply with our legal obligations under Albanian law."
@@ -43,13 +45,13 @@
       {
         "title": "Legal basis",
         "paragraphs": [
-          "We process your data on the basis of your consent (when you send us a message), our legitimate interest in operating and improving the website, and, where applicable, to fulfil legal obligations, in accordance with the Albanian legislation on personal data protection."
+          "We process your data on the basis of your consent (when you send us a message or sign up for price notifications), our legitimate interest in operating and improving the website, and, where applicable, to fulfil legal obligations, in accordance with the Albanian legislation on personal data protection."
         ]
       },
       {
         "title": "Cookies and local storage",
         "paragraphs": [
-          "The OMW website does not use advertising or tracking cookies. Our analytics service works without cookies. We store your selected language in your browser's local storage so the website opens in the same language next time. You can clear it at any time from your browser settings."
+          "The OMW website does not use advertising or tracking cookies. Our analytics service works without cookies. We store your selected language in your browser's local storage so the website opens in the same language next time. We also store there whether the price-notification signup window has been shown to you or whether you have signed up, so it does not appear too often. You can clear it at any time from your browser settings."
         ]
       },
       {
@@ -65,7 +67,7 @@
       {
         "title": "Data retention",
         "paragraphs": [
-          "Messages sent through the contact form are kept only for as long as needed to handle your request and any follow-up communication, unless a longer period is required by law. Analytics data is kept in aggregated, anonymous form."
+          "Messages sent through the contact form are kept only for as long as needed to handle your request and any follow-up communication, unless a longer period is required by law. Analytics data is kept in aggregated, anonymous form. Email addresses for price notifications are kept until you unsubscribe. To protect against abuse, we store the IP address a signup comes from only in encoded (hashed) form, never the full IP address."
         ]
       },
       {
@@ -78,7 +80,7 @@
           "Request correction of inaccurate data.",
           "Request deletion of your data.",
           "Object to or restrict certain processing.",
-          "Withdraw your consent at any time.",
+          "Withdraw your consent at any time, including unsubscribing from email notifications.",
           "File a complaint with the Commissioner for the Right to Information and Personal Data Protection (IDP)."
         ]
       },

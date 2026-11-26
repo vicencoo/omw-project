@@ -1,24 +1,26 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
 
-import sqHome from './locales/sq/home.json';
-import enHome from './locales/en/home.json';
-import sqCommon from './locales/sq/common.json';
-import enCommon from './locales/en/common.json';
-import sqContact from './locales/sq/contact.json';
-import enContact from './locales/en/contact.json';
-import sqAbout from './locales/sq/about.json';
-import enAbout from './locales/en/about.json';
-import sqProducts from './locales/sq/products.json';
-import enProducts from './locales/en/products.json';
-import sqServices from './locales/sq/services.json';
-import enServices from './locales/en/services.json';
-import sqLocations from './locales/sq/locations.json';
-import enLocations from './locales/en/locations.json';
-import sqLegal from './locales/sq/legal.json';
-import enLegal from './locales/en/legal.json';
+import sqHome from "./locales/sq/home.json";
+import enHome from "./locales/en/home.json";
+import sqCommon from "./locales/sq/common.json";
+import enCommon from "./locales/en/common.json";
+import sqContact from "./locales/sq/contact.json";
+import enContact from "./locales/en/contact.json";
+import sqAbout from "./locales/sq/about.json";
+import enAbout from "./locales/en/about.json";
+import sqProducts from "./locales/sq/products.json";
+import enProducts from "./locales/en/products.json";
+import sqServices from "./locales/sq/services.json";
+import enServices from "./locales/en/services.json";
+import sqLocations from "./locales/sq/locations.json";
+import enLocations from "./locales/en/locations.json";
+import sqLegal from "./locales/sq/legal.json";
+import enLegal from "./locales/en/legal.json";
+import sqSignup from "./locales/sq/signup.json";
+import enSignup from "./locales/en/signup.json";
 
-const savedLanguage = localStorage.getItem('language') || 'sq';
+const savedLanguage = localStorage.getItem("language") || "sq";
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -31,6 +33,7 @@ i18n.use(initReactI18next).init({
       services: sqServices,
       locations: sqLocations,
       legal: sqLegal,
+      signup: sqSignup,
     },
     en: {
       home: enHome,
@@ -41,28 +44,30 @@ i18n.use(initReactI18next).init({
       services: enServices,
       locations: enLocations,
       legal: enLegal,
+      signup: enSignup,
     },
   },
   lng: savedLanguage,
-  fallbackLng: 'sq',
+  fallbackLng: "sq",
   ns: [
-    'common',
-    'home',
-    'contact',
-    'about',
-    'products',
-    'services',
-    'locations',
-    'legal',
+    "common",
+    "home",
+    "contact",
+    "about",
+    "products",
+    "services",
+    "locations",
+    "legal",
+    "signup",
   ],
-  defaultNS: 'common',
+  defaultNS: "common",
   interpolation: {
     escapeValue: false,
   },
 });
 
-i18n.on('languageChanged', (lng) => {
-  localStorage.setItem('language', lng);
+i18n.on("languageChanged", (lng) => {
+  localStorage.setItem("language", lng);
 });
 
 export default i18n;

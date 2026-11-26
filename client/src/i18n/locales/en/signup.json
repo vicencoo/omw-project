@@ -1,0 +1,18 @@
+{
+  "title": "Be the first to know when prices change",
+  "text": "Enter your email and we'll notify you whenever fuel prices change at OMW.",
+  "email_label": "Email",
+  "placeholder": "name@email.com",
+  "button": "Notify me",
+  "sending": "Signing up…",
+  "note": "You can unsubscribe at any time.",
+  "close": "Close",
+  "thanks_title": "Thank you!",
+  "thanks_text": "We'll email you whenever the fuel price changes.",
+  "errors": {
+    "invalid_email": "Please enter a valid email.",
+    "fake_email": "Please use a real email address.",
+    "too_many": "Too many attempts. Please try again later.",
+    "generic": "Something went wrong. Please try again."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Mësoni të parët kur ndryshon çmimi",
+  "text": "Shkruani email-in tuaj dhe do t'ju njoftojmë sa herë ndryshojnë çmimet e karburantit në OMW.",
+  "email_label": "Email",
+  "placeholder": "emri@email.com",
+  "button": "Më njofto",
+  "sending": "Duke u regjistruar…",
+  "note": "Mund të çregjistroheni kurdoherë.",
+  "close": "Mbyll",
+  "thanks_title": "Faleminderit!",
+  "thanks_text": "Do t'ju njoftojmë me email sa herë ndryshon çmimi i karburantit.",
+  "errors": {
+    "invalid_email": "Shkruani një email të vlefshëm.",
+    "fake_email": "Përdorni një adresë email të vërtetë.",
+    "too_many": "Shumë tentativa. Provoni më vonë.",
+    "generic": "Diçka nuk shkoi. Provoni përsëri."
+  }
+}

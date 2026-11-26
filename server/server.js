@@ -1,20 +1,21 @@
-require('dotenv').config({ quiet: true });
+require("dotenv").config({ quiet: true });
 
-const express = require('express');
-const sequelize = require('./config/database');
-const cors = require('cors');
+const express = require("express");
+const sequelize = require("./config/database");
+const cors = require("cors");
 const app = express();
-const cookieParser = require('cookie-parser');
+const cookieParser = require("cookie-parser");
 
-const userRoutes = require('./routes/userRoutes');
-const priceRoutes = require('./routes/priceRoutes');
-const contactRoutes = require('./routes/contactRoutes');
+const userRoutes = require("./routes/userRoutes");
+const priceRoutes = require("./routes/priceRoutes");
+const contactRoutes = require("./routes/contactRoutes");
+const subscribeRoutes = require("./routes/subscriberRoutes");
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
-const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
+const allowedOrigins = process.env.ALLOWED_ORIGINS.split(",");
 // const allowedOrigins = process.env.ALLOWED_LOCAL;
 
 app.use(
@@ -28,7 +29,7 @@ app.use(
 
       return callback(null, false);
     },
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   }),
 );
@@ -44,6 +45,7 @@ app.use(
 app.use(userRoutes);
 app.use(priceRoutes);
 app.use(contactRoutes);
+app.use(subscribeRoutes);
 
 const port = process.env.PORT || 8000;
 

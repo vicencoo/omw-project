@@ -1,17 +1,19 @@
 export const Text = ({
   // eslint-disable-next-line no-unused-vars
-  Tag = 'p',
+  Tag = "p",
   text,
-  size = 'text-base',
-  font = 'font-normal',
+  id,
+  size = "text-base",
+  font = "font-normal",
   style,
   children,
   onClick,
   ref,
-  className = '',
+  className = "",
 }) => {
   return (
     <Tag
+      id={id}
       className={`${size} ${font} ${className}`}
       style={style}
       onClick={onClick}

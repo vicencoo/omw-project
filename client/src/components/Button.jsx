@@ -1,11 +1,11 @@
-import { Button as MuiButton } from '@mui/material';
+import { Button as MuiButton } from "@mui/material";
 
 const DEFAULT_COLORS = {
-  color: '#1a1a1a', // near-black — always passes
-  bgColor: 'white',
-  border: '#1a1a1a',
-  bgHover: '#1a1a1a',
-  hoverColor: '#ffffff',
+  color: "#1a1a1a", // near-black — always passes
+  bgColor: "white",
+  border: "#1a1a1a",
+  bgHover: "#1a1a1a",
+  hoverColor: "#ffffff",
 };
 
 export const Button = ({
@@ -15,23 +15,25 @@ export const Button = ({
   hoverColor = DEFAULT_COLORS.hoverColor,
   bgColor = DEFAULT_COLORS.bgColor,
   bgHover = DEFAULT_COLORS.bgHover,
-  variant = 'outlined',
+  variant = "outlined",
   fullWidth = false,
   endIcon,
-  rounded = '6px',
+  rounded = "6px",
   icon,
   border = DEFAULT_COLORS.border,
   borderHover,
-  type = 'button',
+  type = "button",
   disabled,
   loading,
-  padding = '10px 35px',
+  ariaLabel,
+  padding = "10px 35px",
   className,
 }) => {
   return (
     <MuiButton
       type={type}
       disabled={disabled || loading}
+      aria-label={ariaLabel}
       variant={variant}
       fullWidth={fullWidth}
       onClick={onClick}
@@ -40,41 +42,41 @@ export const Button = ({
       className={`text-nowrap ${className}`}
       sx={{
         padding: `${padding}`,
-        color: color || 'white',
-        borderColor: border || 'black',
-        backgroundColor: bgColor || 'black',
+        color: color || "white",
+        borderColor: border || "black",
+        backgroundColor: bgColor || "black",
         borderRadius: rounded,
-        display: 'flex',
-        alignItems: 'center',
-        '&:hover': {
-          backgroundColor: bgHover || 'black',
-          color: hoverColor || 'white',
-          borderColor: borderHover || 'black',
-          '& .MuiButton-startIcon, & .MuiButton-endIcon': {
-            transform: 'scale(1.1)',
+        display: "flex",
+        alignItems: "center",
+        "&:hover": {
+          backgroundColor: bgHover || "black",
+          color: hoverColor || "white",
+          borderColor: borderHover || "black",
+          "& .MuiButton-startIcon, & .MuiButton-endIcon": {
+            transform: "scale(1.1)",
           },
         },
-        '& .MuiButton-startIcon, & .MuiButton-endIcon': {
-          transition: 'transform 0.2s ease',
-          fontSize: '0.9em',
+        "& .MuiButton-startIcon, & .MuiButton-endIcon": {
+          transition: "transform 0.2s ease",
+          fontSize: "0.9em",
         },
 
-        '& .button-text': {
-          transition: 'transform 0.2s ease',
-          display: 'inline-block',
+        "& .button-text": {
+          transition: "transform 0.2s ease",
+          display: "inline-block",
         },
 
-        '&.Mui-disabled': {
+        "&.Mui-disabled": {
           backgroundColor: bgColor,
           color: color,
-          borderColor: border || 'black',
+          borderColor: border || "black",
           opacity: 0.5,
-          cursor: 'not-allowed',
-          pointerEvents: 'auto',
+          cursor: "not-allowed",
+          pointerEvents: "auto",
         },
       }}
     >
-      <span className='button-text capitalize text-sm font-medium'>{name}</span>
+      <span className="button-text capitalize text-sm font-medium">{name}</span>
     </MuiButton>
   );
 };

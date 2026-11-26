@@ -1,6 +1,6 @@
 {
   "updated": "Përditësuar më",
-  "date": "11 Nëntor 2026",
+  "date": "26 Nëntor 2026",
   "toc": "Përmbajtja",
   "cta": {
     "title": "Keni një pyetje për të dhënat tuaja ose kushtet tona?",
@@ -27,6 +27,7 @@
         ],
         "items": [
           "Të dhënat e formularit të kontaktit: emri, mbiemri, adresa e email-it, subjekti dhe mesazhi.",
+          "Adresa juaj e email-it, nëse regjistroheni për njoftimet e çmimeve, së bashku me datën dhe faqen nga u regjistruat.",
           "Statistika anonime përdorimi: faqet e vizituara, faqja nga keni ardhur, lloji i pajisjes, shfletuesi dhe shteti — të mbledhura pa cookies dhe pa ju identifikuar personalisht.",
           "Preferencat e ruajtura në pajisjen tuaj: gjuha që keni zgjedhur për faqen."
         ]
@@ -35,6 +36,7 @@
         "title": "Si i përdorim të dhënat",
         "items": [
           "Për t'u përgjigjur pyetjeve, kërkesave dhe ofertave që na dërgoni përmes formularit të kontaktit.",
+          "Për t'ju dërguar njoftime me email kur ndryshojnë çmimet e karburantit, nëse jeni regjistruar për to.",
           "Për të kuptuar si përdoret faqja dhe për të përmirësuar përmbajtjen dhe performancën e saj.",
           "Për të mbajtur mend gjuhën tuaj të preferuar ndërmjet vizitave.",
           "Për të përmbushur detyrimet tona ligjore sipas legjislacionit shqiptar."
@@ -43,13 +45,13 @@
       {
         "title": "Baza ligjore",
         "paragraphs": [
-          "Ne i përpunojmë të dhënat tuaja në bazë të pëlqimit tuaj (kur na dërgoni një mesazh), interesit tonë të ligjshëm për të administruar dhe përmirësuar faqen dhe, kur zbatohet, për të përmbushur detyrime ligjore, në përputhje me legjislacionin shqiptar për mbrojtjen e të dhënave personale."
+          "Ne i përpunojmë të dhënat tuaja në bazë të pëlqimit tuaj (kur na dërgoni një mesazh ose regjistroheni për njoftimet e çmimeve), interesit tonë të ligjshëm për të administruar dhe përmirësuar faqen dhe, kur zbatohet, për të përmbushur detyrime ligjore, në përputhje me legjislacionin shqiptar për mbrojtjen e të dhënave personale."
         ]
       },
       {
         "title": "Cookies dhe ruajtja lokale",
         "paragraphs": [
-          "Faqja e OMW nuk përdor cookies reklamuese apo gjurmuese. Shërbimi ynë i analitikës funksionon pa cookies. Gjuhën që zgjidhni e ruajmë në hapësirën lokale të shfletuesit tuaj, që faqja të hapet në të njëjtën gjuhë herën tjetër. Mund ta fshini në çdo kohë nga cilësimet e shfletuesit."
+          "Faqja e OMW nuk përdor cookies reklamuese apo gjurmuese. Shërbimi ynë i analitikës funksionon pa cookies. Gjuhën që zgjidhni e ruajmë në hapësirën lokale të shfletuesit tuaj, që faqja të hapet në të njëjtën gjuhë herën tjetër. Gjithashtu ruajmë aty nëse dritarja e regjistrimit për njoftimet ju është shfaqur ose nëse jeni regjistruar, që të mos ju shfaqet shumë shpesh. Mund ta fshini në çdo kohë nga cilësimet e shfletuesit."
         ]
       },
       {
@@ -65,7 +67,7 @@
       {
         "title": "Ruajtja e të dhënave",
         "paragraphs": [
-          "Mesazhet e dërguara përmes formularit të kontaktit ruhen vetëm për aq kohë sa nevojitet për të trajtuar kërkesën tuaj dhe komunikimin pasues, përveç rasteve kur ligji kërkon një periudhë më të gjatë. Të dhënat e analitikës ruhen në formë të përmbledhur dhe anonime."
+          "Mesazhet e dërguara përmes formularit të kontaktit ruhen vetëm për aq kohë sa nevojitet për të trajtuar kërkesën tuaj dhe komunikimin pasues, përveç rasteve kur ligji kërkon një periudhë më të gjatë. Të dhënat e analitikës ruhen në formë të përmbledhur dhe anonime. Adresat e email-it për njoftimet e çmimeve ruhen derisa të çregjistroheni. Për mbrojtje nga abuzimet, adresën IP nga e cila bëhet regjistrimi e ruajmë vetëm në formë të koduar (hash), jo adresën IP të plotë."
         ]
       },
       {
@@ -78,7 +80,7 @@
           "Kërkoni korrigjimin e të dhënave të pasakta.",
           "Kërkoni fshirjen e të dhënave tuaja.",
           "Kundërshtoni ose kufizoni disa lloje përpunimi.",
-          "Tërhiqni pëlqimin tuaj në çdo kohë.",
+          "Tërhiqni pëlqimin tuaj në çdo kohë, përfshirë çregjistrimin nga njoftimet me email.",
           "Paraqisni ankesë pranë Komisionerit për të Drejtën e Informimit dhe Mbrojtjen e të Dhënave Personale (KDIMDHP)."
         ]
       },
