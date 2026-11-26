@@ -1,7 +1,10 @@
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { MapPin } from "lucide-react";
 import { Text } from "../../components/Text";
 import { formatDateTime } from "../../utils/formatDateTime";
 import { Reveal } from "../../components/Reveal";
+import { findStationLocation } from "../../data/locations/locations";
 
 const fuelColors = {
   "diesel 10ppm": "#1218c3",
@@ -14,6 +17,7 @@ const fuelColors = {
 
 export const StationPriceCard = ({ s, i }) => {
   const { t } = useTranslation("common");
+  const location = findStationLocation(s);
 
   return (
     <Reveal>
@@ -63,6 +67,16 @@ export const StationPriceCard = ({ s, i }) => {
           >
             {t("prices.updated_at")} {formatDateTime(s.last_price_update)}
           </span>
+
+          {location && (
+            <Link
+              to={`/locations?station=${location.id}`}
+              className="mt-1 inline-flex w-fit items-center gap-1.5 rounded-full border border-green-600 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[.12em] text-green-700 transition-colors hover:bg-green-600 hover:text-white"
+            >
+              <MapPin size={13} />
+              {t("prices.see_location")}
+            </Link>
+          )}
         </div>
 
         {/* Prices */}

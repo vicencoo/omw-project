@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
-export const useLocations = (locations) => {
-  const [activeId, setActiveId] = useState(null);
+export const useLocations = (locations, initialId = null) => {
+  const [activeId, setActiveId] = useState(initialId);
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
   const markersRef = useRef({});
@@ -73,7 +73,7 @@ export const useLocations = (locations) => {
     const loc = locations.find((l) => l.id === activeId);
     if (loc)
       mapInstanceRef.current.flyTo([loc.lat, loc.lng], 13, { duration: 1.2 });
-  }, [activeId, locations]);
+  }, [activeId, locations, mapReady]);
 
   return { activeId, setActiveId, mapRef };
 };

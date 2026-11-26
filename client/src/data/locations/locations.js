@@ -80,3 +80,20 @@ export const locations = [
   //   lng: 20.76552855800505,
   // },
 ];
+
+// Letters only, lowercase, no accents: "Dalje të Përmetit" -> "daljetepermetit"
+const normalize = (text = "") =>
+  text
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z]/g, "");
+
+// Finds the map location of a price station (by its area, or by its city when that city has one station)
+export const findStationLocation = ({ city, area }) => {
+  const text = (loc) => normalize(`${loc.name} ${loc.address}`);
+  const byArea = locations.find((loc) => normalize(area) && text(loc).includes(normalize(area)));
+  if (byArea) return byArea;
+  const byCity = locations.filter((loc) => text(loc).includes(normalize(city)));
+  return byCity.length === 1 ? byCity[0] : null;
+};
